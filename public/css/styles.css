@@ -637,6 +637,9 @@ h4{
 .h-6{
   height: 1.5rem;
 }
+.h-7{
+  height: 1.75rem;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -658,6 +661,9 @@ h4{
 }
 .w-6{
   width: 1.5rem;
+}
+.w-12{
+  width: 3rem;
 }
 .max-w-base{
   max-width: 90rem;
@@ -845,6 +851,14 @@ h4{
 
   .sm\:h-16{
     height: 4rem;
+  }
+
+  .sm\:h-auto{
+    height: auto;
+  }
+
+  .sm\:w-auto{
+    width: auto;
   }
 
   .sm\:px-6{
