@@ -776,6 +776,9 @@ section{
 .shrink-0{
   flex-shrink: 0;
 }
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .cursor-pointer{
   cursor: pointer;
 }
@@ -871,6 +874,10 @@ section{
   --tw-bg-opacity: 1;
   background-color: rgb(245 247 253 / var(--tw-bg-opacity));
 }
+.bg-brand-gray-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 247 251 / var(--tw-bg-opacity));
+}
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -899,6 +906,9 @@ section{
 }
 .p-7{
   padding: 1.75rem;
+}
+.p-1{
+  padding: 0.25rem;
 }
 .px-0{
   padding-left: 0px;
@@ -1133,8 +1143,17 @@ section{
 
 @media (min-width: 40rem){
 
+  .sm\:mx-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .sm\:mt-5{
     margin-top: 1.25rem;
+  }
+
+  .sm\:mt-0{
+    margin-top: 0px;
   }
 
   .sm\:flex{
@@ -1163,10 +1182,6 @@ section{
 
   .sm\:w-auto{
     width: auto;
-  }
-
-  .sm\:p-10{
-    padding: 2.5rem;
   }
 
   .sm\:px-6{
@@ -1249,10 +1264,6 @@ section{
 
   .lg\:p-8{
     padding: 2rem;
-  }
-
-  .lg\:p-10{
-    padding: 2.5rem;
   }
 
   .lg\:py-4{

@@ -44,7 +44,7 @@ var swiper = new Swiper('.swiper-services', {
 
 function updateCustomPagination(swiper) {
   const current = swiper.realIndex + 1;
-  const total = swiper.slides.length - 4;
+  const total = swiper.slides.length;
   const paginationElement = document.querySelectorAll(
     '.swiper-pagination-custom'
   );

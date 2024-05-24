@@ -29,6 +29,7 @@ module.exports = {
             200: '#F6F7FC',
             300: '#E6E8ED',
             400: '#F5F7FD',
+            500: '#F7F7FB',
           },
         },
       },
