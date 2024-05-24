@@ -9,6 +9,13 @@
     @apply font-inter;
   }
 
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-brand-dark font-bold;
+  }
+
   h2 {
     @apply text-2xl sm:text-3xl md:text-4xl xl:text-40;
   }
@@ -19,5 +26,13 @@
 
   h4 {
     @apply text-lg sm:text-xl leading-18 lg:leading-7;
+  }
+
+  p {
+    @apply text-sm leading-18;
+  }
+
+  section {
+    @apply pt-8 lg:pt-16 xl:pt-24 md:px-10 lg:px-0;
   }
 }

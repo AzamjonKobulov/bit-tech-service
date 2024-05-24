@@ -35,6 +35,14 @@ module.exports = {
       lineHeight: {
         18: '1.125rem',
       },
+      borderRadius: {
+        32: '2rem',
+      },
+      backgroundImage: {
+        'base-gradient': 'linear-gradient(180deg, #F7F7FA 0%, #F4F7FD 100%);',
+        'blue-gradient':
+          'linear-gradient(0deg, #0060FE, #0060FE), linear-gradient(180deg, #0060FE 0%, rgba(0, 96, 254, 0.8) 100%), linear-gradient(180deg, #0060FE 0%, #317FFE 100%);',
+      },
     },
   },
   plugins: [],
