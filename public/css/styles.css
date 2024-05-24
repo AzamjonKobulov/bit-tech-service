@@ -757,6 +757,10 @@ h4{
   padding-left: 0.875rem;
   padding-right: 0.875rem;
 }
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .pl-4{
   padding-left: 1rem;
 }
@@ -845,6 +849,11 @@ h4{
   .xs\:hidden{
     display: none;
   }
+
+  .xs\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 
 @media (min-width: 40rem){
@@ -864,6 +873,11 @@ h4{
   .sm\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .sm\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 
