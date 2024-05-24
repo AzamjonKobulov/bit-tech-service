@@ -767,6 +767,15 @@ h4{
 .pr-3{
   padding-right: 0.75rem;
 }
+.pl-3{
+  padding-left: 0.75rem;
+}
+.pl-2{
+  padding-left: 0.5rem;
+}
+.pl-2\.5{
+  padding-left: 0.625rem;
+}
 .text-end{
   text-align: end;
 }
@@ -853,6 +862,10 @@ h4{
   .xs\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .xs\:pl-4{
+    padding-left: 1rem;
   }
 }
 
