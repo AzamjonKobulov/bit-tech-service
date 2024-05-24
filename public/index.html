@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>BIT TECH SERVICE</title>
   </head>
-  <body class="min-h-screen">
+  <body class="pb-96">
     <!-- HEADER -->
-    <header class="sticky top-0 bg-white">
+    <header class="sticky top-0 z-50 bg-white">
       <!-- Navbar -->
       <nav class="text-brand-dark font-medium">
         <!-- Top Nav -->
@@ -77,7 +82,7 @@
             </li>
           </ul>
           <!-- Adress & Working Schedule -->
-          <div class="flex items-center gap-10 xl:gap-16">
+          <div class="flex items-center g p-5asm:p-10 xl:gap-16">
             <a href="#">ул. Пушкинская, 136 А</a>
             <p class="text-end">
               пн-пт с 10:00 до 19:00 <br />
@@ -120,25 +125,28 @@
             </div>
             <!-- Search -->
             <div class="flex-1 flex items-center px-4 xs:px-5 sm:px-6">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 21L16.657 16.657M16.657 16.657C17.3998 15.9141 17.9891 15.0322 18.3912 14.0616C18.7932 13.0909 19.0002 12.0506 19.0002 11C19.0002 9.94942 18.7932 8.90911 18.3912 7.93848C17.9891 6.96785 17.3998 6.08591 16.657 5.34302C15.9141 4.60014 15.0321 4.01084 14.0615 3.6088C13.0909 3.20675 12.0506 2.99982 11 2.99982C9.94936 2.99982 8.90905 3.20675 7.93842 3.6088C6.96779 4.01084 6.08585 4.60014 5.34296 5.34302C3.84263 6.84335 2.99976 8.87824 2.99976 11C2.99976 13.1218 3.84263 15.1567 5.34296 16.657C6.84329 18.1574 8.87818 19.0002 11 19.0002C13.1217 19.0002 15.1566 18.1574 16.657 16.657Z"
-                  stroke="#D1D1D9"
-                  stroke-width="2.4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <label for="search" class="cursor-pointer">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 21L16.657 16.657M16.657 16.657C17.3998 15.9141 17.9891 15.0322 18.3912 14.0616C18.7932 13.0909 19.0002 12.0506 19.0002 11C19.0002 9.94942 18.7932 8.90911 18.3912 7.93848C17.9891 6.96785 17.3998 6.08591 16.657 5.34302C15.9141 4.60014 15.0321 4.01084 14.0615 3.6088C13.0909 3.20675 12.0506 2.99982 11 2.99982C9.94936 2.99982 8.90905 3.20675 7.93842 3.6088C6.96779 4.01084 6.08585 4.60014 5.34296 5.34302C3.84263 6.84335 2.99976 8.87824 2.99976 11C2.99976 13.1218 3.84263 15.1567 5.34296 16.657C6.84329 18.1574 8.87818 19.0002 11 19.0002C13.1217 19.0002 15.1566 18.1574 16.657 16.657Z"
+                    stroke="#D1D1D9"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </label>
               <input
                 type="text"
                 placeholder="Что вы хотите найти?"
                 class="w-full outline-none placeholder:text-brand-dark/50 pl-2.5 xs:pl-4 py-2"
+                id="search"
               />
             </div>
             <!-- Phone -->
@@ -225,16 +233,18 @@
       <!-- Hero -->
       <section id="hero" class="pt-5">
         <div
-          class="h-[31.75rem] max-w-base mx-auto grid lg:grid-cols-5 gap-5 text-center px-5"
+          class="max-w-base mx-auto grid lg:grid-cols-5 gap-5 text-center px-5"
         >
           <!-- Left -->
           <div class="h-full lg:col-span-3 space-y-5">
             <!-- Top -->
             <div
-              class="bg-base-gradient rounded-3xl lg:rounded-32 pt-8 md:pt-10 lg:pt-12 px-5"
+              class="relative group bg-base-gradient rounded-3xl lg:rounded-32 pt-8 md:pt-10 lg:pt-12 px-5"
             >
               <!-- Title -->
-              <h1 class="text-2xl xs:text-3xl md:text-4xl xl:text-40">
+              <h1
+                class="text-2xl xs:text-3xl md:text-4xl xl:text-40 leading-6 sm:leading-normal"
+              >
                 Ремонт бытовой техники
               </h1>
               <!-- Description -->
@@ -249,6 +259,25 @@
                 alt="Image"
                 class="mx-auto mt-5"
               />
+
+              <!-- Arrow -->
+              <a
+                href="#"
+                class="w-10 h-10 shrink-0 absolute bottom-5 right-5 hidden group-hover:grid place-content-center bg-white rounded-full transition-all duration-200"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.0002 3.33333L8.82516 4.50833L12.7938 8.48407C13.0454 8.73616 12.8669 9.16666 12.5107 9.16666H3.3335V10.8333H12.5107C12.8669 10.8333 13.0454 11.2638 12.7938 11.5159L8.82516 15.4917L10.0002 16.6667L15.9597 10.7071C16.3502 10.3166 16.3502 9.68341 15.9597 9.29289L10.0002 3.33333Z"
+                    fill="#1D1D1D"
+                  />
+                </svg>
+              </a>
             </div>
             <!-- Bottom -->
             <div class="grid xs:grid-cols-2 gap-5">
@@ -322,15 +351,17 @@
           </div>
           <!-- Right -->
           <div
-            class="lg:col-span-2 flex flex-col justify-between bg-base-gradient rounded-3xl lg:rounded-32 pt-8 md:pt-10 lg:pt-12 px-5"
+            class="lg:col-span-2 flex flex-col justify-between gap-7 sm:g p-5asm:p-10 bg-base-gradient rounded-3xl lg:rounded-32 pt-8 md:pt-10 lg:pt-12 px-5"
           >
             <!-- Texts -->
             <div>
               <!-- Title -->
-              <h1 class="text-2xl xs:text-3xl md:text-4xl xl:text-40">
+              <h2
+                class="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-40 leading-6"
+              >
                 Ремонт в рассрочку <br />
                 без переплат
-              </h1>
+              </h2>
               <!-- Description -->
               <p
                 class="max-w-80 mx-auto text-brand-dark/50 text-xs xs:text-sm mt-2 sm:mt-5"
@@ -339,14 +370,813 @@
                 в рассрочку без переплат!
               </p>
             </div>
-            <img
-              src="./assets/images/img-hero-calc.png"
-              alt="Image"
-              class="mx-auto"
-            />
+            <div class="w-fit relative mx-auto">
+              <div
+                class="w-20 h-20 sm:w-24 sm:h-24 lg:h-[7rem] lg:w-[7rem] shrink-0 absolute left-0 xs:-left-[10%] -top-[5%] grid place-content-center bg-pink-gradient rounded-full"
+              >
+                <svg
+                  width="38"
+                  height="42"
+                  viewBox="0 0 38 42"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-7 h-8 sm:h-auto sm:w-auto"
+                >
+                  <path
+                    d="M27.5294 41.1176C22.4879 41.4567 17.7721 40.0312 13.382 36.8412C8.99182 33.6512 5.97057 29.5085 4.31823 24.4129L0.33529 12.1412L14.4705 0.882365L32.5234 1.69411L36.5064 13.9658C38.1605 19.0623 38.1476 24.1906 36.4676 29.3507C34.7875 34.5109 31.8082 38.4332 27.5294 41.1176ZM24.2647 31.0588C23.3505 28.2423 23.5502 25.5461 24.8638 22.9702C26.1773 20.3944 28.2423 18.6494 31.0588 17.7353C28.2423 18.6494 25.5461 18.4497 22.9702 17.1361C20.3944 15.8226 18.6494 13.7576 17.7352 10.9412C18.6494 13.7576 18.4497 16.4538 17.1361 19.0297C15.8226 21.6056 13.7576 23.3505 10.9412 24.2647C13.7576 23.3505 16.4538 23.5503 19.0297 24.8638C21.6055 26.1773 23.3505 28.2423 24.2647 31.0588Z"
+                    fill="#FE0032"
+                  />
+                </svg>
+              </div>
+              <img
+                src="./assets/images/img-hero-calc.png"
+                alt="Image"
+                class="mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="px-0">
+        <div class="max-w-base mx-auto">
+          <!-- Title & Navigation Buttons -->
+          <div class="flex items-center justify-between px-5">
+            <h2>Что мы ремонтируем?</h2>
+            <!-- Buttons & Pagination Fraction -->
+            <div class="hidden sm:flex items-center gap-6">
+              <!-- Pagination Fraction -->
+              <p class="swiper-pagination-custom text-brand-dark/40 text-base">
+                1/5
+              </p>
+              <!-- Buttons -->
+              <div class="flex items-center gap-2">
+                <!-- Left -->
+                <button
+                  class="swiper-services-prev w-10 h-10 shrink-0 group grid place-content-center bg-brand-gray-400 rounded-full hover:bg-brand-dark transition-all duration-200"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="fill-brand-dark group-hover:fill-white transition-all duration-200"
+                  >
+                    <path
+                      d="M9.99984 3.33333L11.1748 4.50833L7.2062 8.48407C6.95457 8.73616 7.13311 9.16666 7.4893 9.16666H16.6665V10.8333H7.4893C7.13311 10.8333 6.95457 11.2638 7.2062 11.5159L11.1748 15.4917L9.99984 16.6667L4.04028 10.7071C3.64975 10.3166 3.64975 9.68341 4.04028 9.29289L9.99984 3.33333Z"
+                    />
+                  </svg>
+                </button>
+                <!-- Right -->
+                <button
+                  class="swiper-services-next w-10 h-10 shrink-0 group grid place-content-center bg-brand-gray-400 rounded-full hover:bg-brand-dark transition-all duration-200"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="fill-brand-dark group-hover:fill-white transition-all duration-200"
+                  >
+                    <path
+                      d="M10.0002 3.33333L8.82516 4.50833L12.7938 8.48407C13.0454 8.73616 12.8669 9.16666 12.5107 9.16666H3.3335V10.8333H12.5107C12.8669 10.8333 13.0454 11.2638 12.7938 11.5159L8.82516 15.4917L10.0002 16.6667L15.9597 10.7071C16.3502 10.3166 16.3502 9.68341 15.9597 9.29289L10.0002 3.33333Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Swiper -->
+          <div
+            class="swiper swiper-services border-y border-brand-gray-300 mt-6"
+          >
+            <div class="swiper-wrapper divide-x divide-brand-gray-300">
+              <!-- Slide 1 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 500 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-1.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Стиральные машины</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>не сливает</li>
+                      <li>не отжимает</li>
+                      <li>протекает</li>
+                      <li>шумит</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 1 200 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-2.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Холодильники</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>перемораживает</li>
+                      <li>не холодит</li>
+                      <li>щелкает</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 800 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-3.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Кофемашины</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>не включается</li>
+                      <li>протекает</li>
+                      <li>не греет воду</li>
+                      <li>выдает ошибку</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 4 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 500 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-4.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Кондиционеры</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>утечка фриона</li>
+                      <li>засор фильтра</li>
+                      <li>сломан датчик</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 5 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 500 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-5.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>ПК и ноутбуки</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>не включается</li>
+                      <li>не выключается</li>
+                      <li>шумит</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 1 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 500 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-1.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Стиральные машины</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>не сливает</li>
+                      <li>не отжимает</li>
+                      <li>протекает</li>
+                      <li>шумит</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 1 200 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-2.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Холодильники</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>перемораживает</li>
+                      <li>не холодит</li>
+                      <li>щелкает</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 800 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-3.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Кофемашины</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>не включается</li>
+                      <li>протекает</li>
+                      <li>не греет воду</li>
+                      <li>выдает ошибку</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 4 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 500 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-4.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Кондиционеры</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>утечка фриона</li>
+                      <li>засор фильтра</li>
+                      <li>сломан датчик</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 5 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 500 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-5.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>ПК и ноутбуки</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>не включается</li>
+                      <li>не выключается</li>
+                      <li>шумит</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 1 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 500 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-1.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Стиральные машины</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>не сливает</li>
+                      <li>не отжимает</li>
+                      <li>протекает</li>
+                      <li>шумит</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 1 200 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-2.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Холодильники</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>перемораживает</li>
+                      <li>не холодит</li>
+                      <li>щелкает</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 800 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-3.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Кофемашины</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>не включается</li>
+                      <li>протекает</li>
+                      <li>не греет воду</li>
+                      <li>выдает ошибку</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 4 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 500 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-4.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Кондиционеры</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>утечка фриона</li>
+                      <li>засор фильтра</li>
+                      <li>сломан датчик</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 5 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 500 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-5.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>ПК и ноутбуки</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>не включается</li>
+                      <li>не выключается</li>
+                      <li>шумит</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 1 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 500 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-1.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Стиральные машины</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>не сливает</li>
+                      <li>не отжимает</li>
+                      <li>протекает</li>
+                      <li>шумит</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 1 200 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-2.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Холодильники</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>перемораживает</li>
+                      <li>не холодит</li>
+                      <li>щелкает</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 800 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-3.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Кофемашины</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>не включается</li>
+                      <li>протекает</li>
+                      <li>не греет воду</li>
+                      <li>выдает ошибку</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 4 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 500 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-4.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>Кондиционеры</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>утечка фриона</li>
+                      <li>засор фильтра</li>
+                      <li>сломан датчик</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 5 -->
+              <div class="swiper-slide shrink-0 h-full">
+                <div class="h-full space-y-6 p-5 xs:p-7 xl:p-10">
+                  <!-- Image & Cost -->
+                  <div
+                    class="h-200 w-full 2xl:size-200 shrink-0 relative rounded-3xl overflow-hidden"
+                  >
+                    <!-- Cost -->
+                    <div
+                      class="h-7 absolute top-2 left-2 z-10 grid place-content-center bg-white text-brand-dark font-semibold text-sm rounded-full px-2"
+                    >
+                      от 500 ₽
+                    </div>
+                    <!-- Image -->
+                    <img
+                      src="./assets/images/img-service-5.png"
+                      alt="Service Image"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Texts -->
+                  <div class="space-y-4">
+                    <h5>ПК и ноутбуки</h5>
+                    <ul
+                      class="list-disc space-y-1.5 text-brand-dark/50 text-xs sm:text-sm leading-4 pl-5"
+                    >
+                      <li>не включается</li>
+                      <li>не выключается</li>
+                      <li>шумит</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Buttons & Pagination Fraction -->
+          <div
+            class="w-full sm:hidden flex items-center justify-center gap-6 mt-5 px-5"
+          >
+            <!-- Pagination Fraction -->
+            <p class="swiper-pagination-custom text-brand-dark/40 text-base">
+              1/5
+            </p>
+            <!-- Buttons -->
+            <div class="flex items-center gap-2">
+              <!-- Left -->
+              <button
+                class="swiper-services-prev w-10 h-10 shrink-0 group grid place-content-center bg-brand-gray-400 rounded-full hover:bg-brand-dark transition-all duration-200"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-brand-dark group-hover:fill-white transition-all duration-200"
+                >
+                  <path
+                    d="M9.99984 3.33333L11.1748 4.50833L7.2062 8.48407C6.95457 8.73616 7.13311 9.16666 7.4893 9.16666H16.6665V10.8333H7.4893C7.13311 10.8333 6.95457 11.2638 7.2062 11.5159L11.1748 15.4917L9.99984 16.6667L4.04028 10.7071C3.64975 10.3166 3.64975 9.68341 4.04028 9.29289L9.99984 3.33333Z"
+                  />
+                </svg>
+              </button>
+              <!-- Right -->
+              <button
+                class="swiper-services-next w-10 h-10 shrink-0 group grid place-content-center bg-brand-gray-400 rounded-full hover:bg-brand-dark transition-all duration-200"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-brand-dark group-hover:fill-white transition-all duration-200"
+                >
+                  <path
+                    d="M10.0002 3.33333L8.82516 4.50833L12.7938 8.48407C13.0454 8.73616 12.8669 9.16666 12.5107 9.16666H3.3335V10.8333H12.5107C12.8669 10.8333 13.0454 11.2638 12.7938 11.5159L8.82516 15.4917L10.0002 16.6667L15.9597 10.7071C16.3502 10.3166 16.3502 9.68341 15.9597 9.29289L10.0002 3.33333Z"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
