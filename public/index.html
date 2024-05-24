@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>BIT TECH SERVICE</title>
+  </head>
+  <body class="min-h-screen">
+    <!-- HEADER -->
+    <header class="sticky top-0 bg-white">
+      <!-- Navbar -->
+      <nav class="text-brand-dark font-medium">
+        <!-- Top Nav -->
+        <div
+          class="max-w-base mx-auto hidden lg:flex items-center justify-between text-xs xl:text-sm py-3 lg:py-4 px-5"
+        >
+          <!-- Location -->
+          <div class="flex items-center gap-2">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 14.5H13V12.225L14.95 13.375L15.95 11.625L14 10.5L15.95 9.375L14.95 7.625L13 8.775V6.5H11V8.775L9.05 7.625L8.05 9.375L10 10.5L8.05 11.625L9.05 13.375L11 12.225V14.5ZM12 22C9.31667 19.7167 7.31267 17.5957 5.988 15.637C4.66267 13.679 4 11.8667 4 10.2C4 7.7 4.80433 5.70833 6.413 4.225C8.021 2.74167 9.88333 2 12 2C14.1167 2 15.979 2.74167 17.587 4.225C19.1957 5.70833 20 7.7 20 10.2C20 11.8667 19.3377 13.679 18.013 15.637C16.6877 17.5957 14.6833 19.7167 12 22Z"
+                fill="#0060FE"
+              />
+            </svg>
+            <p>г. Ижевск</p>
+          </div>
+          <!-- Links -->
+          <ul class="flex items-center gap-5 xl:gap-8 text-brand-dark">
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-blue hover:underline transition-all duration-200"
+                >Статус ремонта</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-blue hover:underline transition-all duration-200"
+                >Цены</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-blue hover:underline transition-all duration-200"
+                >Бренды</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-blue hover:underline transition-all duration-200"
+                >Заявка на деталь</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-blue hover:underline transition-all duration-200"
+                >О компании</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-blue hover:underline transition-all duration-200"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+          <!-- Adress & Working Schedule -->
+          <div class="flex items-center gap-10 xl:gap-16">
+            <a href="#">ул. Пушкинская, 136 А</a>
+            <p class="text-end">
+              пн-пт с 10:00 до 19:00 <br />
+              сб — 10:00 до 18:00
+            </p>
+          </div>
+        </div>
+        <!-- Bottom Nav -->
+        <div class="text-sm xl:text-base border-y border-brand-gray-300">
+          <div
+            class="h-14 sm:h-16 xl:h-[4.5rem] max-w-base mx-auto flex divide-x divide-brand-gray-300"
+          >
+            <!-- Logo -->
+            <a href="#" class="w-fit grid place-content-center px-5">
+              <img src="./assets/images/logo.png" alt="Logo" />
+            </a>
+            <!-- Services -->
+            <div class="hidden md:grid place-content-center px-5">
+              <button
+                class="h-9 flex items-center gap-2 bg-brand-blue font-medium text-white text-[0.8125rem] rounded-full hover:bg-brand-dark transition-all duration-200 pl-4 pr-3"
+              >
+                Ремонтируем
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.41336 6.19334L8.00002 8.78L10.5867 6.19334C10.6484 6.13162 10.7217 6.08266 10.8023 6.04925C10.883 6.01585 10.9694 5.99866 11.0567 5.99866C11.144 5.99866 11.2304 6.01585 11.3111 6.04925C11.3917 6.08266 11.465 6.13162 11.5267 6.19334C11.5884 6.25506 11.6374 6.32833 11.6708 6.40898C11.7042 6.48962 11.7214 6.57605 11.7214 6.66334C11.7214 6.75062 11.7042 6.83706 11.6708 6.9177C11.6374 6.99834 11.5884 7.07162 11.5267 7.13334L8.46669 10.1933C8.40502 10.2551 8.33176 10.3042 8.25111 10.3376C8.17046 10.3711 8.084 10.3883 7.99669 10.3883C7.90938 10.3883 7.82292 10.3711 7.74227 10.3376C7.66163 10.3042 7.58837 10.2551 7.52669 10.1933L4.46669 7.13334C4.40489 7.07166 4.35586 6.9984 4.3224 6.91775C4.28895 6.8371 4.27173 6.75065 4.27173 6.66334C4.27173 6.57603 4.28895 6.48957 4.3224 6.40892C4.35586 6.32827 4.40489 6.25501 4.46669 6.19334C4.72669 5.94 5.15336 5.93334 5.41336 6.19334Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+            <!-- Search -->
+            <div class="flex-1 flex items-center px-5 sm:px-6">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 21L16.657 16.657M16.657 16.657C17.3998 15.9141 17.9891 15.0322 18.3912 14.0616C18.7932 13.0909 19.0002 12.0506 19.0002 11C19.0002 9.94942 18.7932 8.90911 18.3912 7.93848C17.9891 6.96785 17.3998 6.08591 16.657 5.34302C15.9141 4.60014 15.0321 4.01084 14.0615 3.6088C13.0909 3.20675 12.0506 2.99982 11 2.99982C9.94936 2.99982 8.90905 3.20675 7.93842 3.6088C6.96779 4.01084 6.08585 4.60014 5.34296 5.34302C3.84263 6.84335 2.99976 8.87824 2.99976 11C2.99976 13.1218 3.84263 15.1567 5.34296 16.657C6.84329 18.1574 8.87818 19.0002 11 19.0002C13.1217 19.0002 15.1566 18.1574 16.657 16.657Z"
+                  stroke="#D1D1D9"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input
+                type="text"
+                placeholder="Что вы хотите найти?"
+                class="w-full outline-none placeholder:text-brand-dark/50 pl-4 py-2"
+              />
+            </div>
+            <!-- Phone -->
+            <div
+              class="group hidden lg:grid place-content-center px-7 xl:px-12"
+            >
+              <a
+                href="tel:"
+                class="flex items-center gap-2 group-hover:text-brand-blue transition-all duration-200"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-brand-dark group-hover:fill-brand-blue transition-all duration-200"
+                >
+                  <path
+                    d="M13.6582 11.4267L10.9482 8.96266C10.8201 8.84623 10.6518 8.78414 10.4787 8.78948C10.3057 8.79483 10.1415 8.86721 10.0209 8.99133L8.42552 10.632C8.04152 10.5587 7.26952 10.318 6.47485 9.52533C5.68019 8.73 5.43952 7.956 5.36819 7.57466L7.00752 5.97866C7.1318 5.85808 7.20428 5.69388 7.20963 5.5208C7.21498 5.34772 7.15278 5.17936 7.03619 5.05133L4.57285 2.342C4.45622 2.21357 4.29411 2.13567 4.12096 2.12484C3.94781 2.11401 3.77725 2.1711 3.64552 2.284L2.19885 3.52466C2.0836 3.64034 2.0148 3.7943 2.00552 3.95733C1.99552 4.124 1.80485 8.072 4.86619 11.1347C7.53685 13.8047 10.8822 14 11.8035 14C11.9382 14 12.0209 13.996 12.0429 13.9947C12.2059 13.9855 12.3597 13.9164 12.4749 13.8007L13.7149 12.3533C13.8282 12.222 13.8857 12.0516 13.8751 11.8785C13.8645 11.7053 13.7867 11.5432 13.6582 11.4267Z"
+                  />
+                </svg>
+                (3412) 655-644
+              </a>
+            </div>
+            <!-- Message -->
+            <button class="group hidden xs:grid place-content-center p-7">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-brand-blue group-hover:fill-brand-dark transition-all duration-200"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.99795 0.0525516C9.1858 0.0522126 10.3586 0.318146 11.4302 0.830794C12.5017 1.34344 13.4447 2.08976 14.1898 3.01487C14.9348 3.93998 15.4631 5.02034 15.7356 6.1765C16.0082 7.33266 16.0181 8.53521 15.7646 9.6957C15.5112 10.8562 15.0008 11.9451 14.2711 12.8824C13.5413 13.8196 12.6108 14.5814 11.5479 15.1117C10.4849 15.6419 9.31665 15.9271 8.12896 15.9464C6.94126 15.9656 5.76436 15.7184 4.68481 15.2228L0.723668 15.9394C0.624332 15.9572 0.522068 15.9483 0.427276 15.9137C0.332483 15.8791 0.248542 15.82 0.183987 15.7424C0.119433 15.6649 0.0765677 15.5716 0.05975 15.4721C0.0429323 15.3726 0.052762 15.2704 0.0882396 15.176L1.22424 12.152C0.486349 10.9476 0.0827418 9.56842 0.0549633 8.15629C0.0271848 6.74415 0.376239 5.35012 1.0662 4.1177C1.75615 2.88528 2.76208 1.85899 3.98043 1.14448C5.19879 0.429977 6.58554 0.0530671 7.99795 0.0525516ZM5.71453 7.99998C5.71453 8.30309 5.59412 8.59378 5.37979 8.8081C5.16546 9.02243 4.87477 9.14284 4.57167 9.14284C4.26856 9.14284 3.97787 9.02243 3.76355 8.8081C3.54922 8.59378 3.42881 8.30309 3.42881 7.99998C3.42881 7.69688 3.54922 7.40619 3.76355 7.19186C3.97787 6.97753 4.26856 6.85712 4.57167 6.85712C4.87477 6.85712 5.16546 6.97753 5.37979 7.19186C5.59412 7.40619 5.71453 7.69688 5.71453 7.99998ZM8.00024 9.14284C8.30334 9.14284 8.59404 9.02243 8.80836 8.8081C9.02269 8.59378 9.1431 8.30309 9.1431 7.99998C9.1431 7.69688 9.02269 7.40619 8.80836 7.19186C8.59404 6.97753 8.30334 6.85712 8.00024 6.85712C7.69714 6.85712 7.40645 6.97753 7.19212 7.19186C6.97779 7.40619 6.85738 7.69688 6.85738 7.99998C6.85738 8.30309 6.97779 8.59378 7.19212 8.8081C7.40645 9.02243 7.69714 9.14284 8.00024 9.14284ZM11.4288 9.14284C11.7319 9.14284 12.0226 9.02243 12.2369 8.8081C12.4513 8.59378 12.5717 8.30309 12.5717 7.99998C12.5717 7.69688 12.4513 7.40619 12.2369 7.19186C12.0226 6.97753 11.7319 6.85712 11.4288 6.85712C11.1257 6.85712 10.835 6.97753 10.6207 7.19186C10.4064 7.40619 10.286 7.69688 10.286 7.99998C10.286 8.30309 10.4064 8.59378 10.6207 8.8081C10.835 9.02243 11.1257 9.14284 11.4288 9.14284Z"
+                />
+              </svg>
+            </button>
+            <!-- Call to Master -->
+            <button
+              class="hidden lg:block bg-brand-blue text-white hover:bg-brand-dark transition-all duration-200 px-10 xl:px-14"
+            >
+              Вызвать мастера
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden px-3.5">
+              <img
+                src="./assets/images/icon-burger.svg"
+                alt="Mobile Menu Icon"
+                class="w-8 h-8"
+              />
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <button
+        class="w-14 h-14 fixed right-5 bottom-10 z-50 group grid xs:hidden place-content-center border border-brand-gray-300 rounded-full"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 fill-brand-blue group-hover:fill-brand-dark transition-all duration-200"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.99795 0.0525516C9.1858 0.0522126 10.3586 0.318146 11.4302 0.830794C12.5017 1.34344 13.4447 2.08976 14.1898 3.01487C14.9348 3.93998 15.4631 5.02034 15.7356 6.1765C16.0082 7.33266 16.0181 8.53521 15.7646 9.6957C15.5112 10.8562 15.0008 11.9451 14.2711 12.8824C13.5413 13.8196 12.6108 14.5814 11.5479 15.1117C10.4849 15.6419 9.31665 15.9271 8.12896 15.9464C6.94126 15.9656 5.76436 15.7184 4.68481 15.2228L0.723668 15.9394C0.624332 15.9572 0.522068 15.9483 0.427276 15.9137C0.332483 15.8791 0.248542 15.82 0.183987 15.7424C0.119433 15.6649 0.0765677 15.5716 0.05975 15.4721C0.0429323 15.3726 0.052762 15.2704 0.0882396 15.176L1.22424 12.152C0.486349 10.9476 0.0827418 9.56842 0.0549633 8.15629C0.0271848 6.74415 0.376239 5.35012 1.0662 4.1177C1.75615 2.88528 2.76208 1.85899 3.98043 1.14448C5.19879 0.429977 6.58554 0.0530671 7.99795 0.0525516ZM5.71453 7.99998C5.71453 8.30309 5.59412 8.59378 5.37979 8.8081C5.16546 9.02243 4.87477 9.14284 4.57167 9.14284C4.26856 9.14284 3.97787 9.02243 3.76355 8.8081C3.54922 8.59378 3.42881 8.30309 3.42881 7.99998C3.42881 7.69688 3.54922 7.40619 3.76355 7.19186C3.97787 6.97753 4.26856 6.85712 4.57167 6.85712C4.87477 6.85712 5.16546 6.97753 5.37979 7.19186C5.59412 7.40619 5.71453 7.69688 5.71453 7.99998ZM8.00024 9.14284C8.30334 9.14284 8.59404 9.02243 8.80836 8.8081C9.02269 8.59378 9.1431 8.30309 9.1431 7.99998C9.1431 7.69688 9.02269 7.40619 8.80836 7.19186C8.59404 6.97753 8.30334 6.85712 8.00024 6.85712C7.69714 6.85712 7.40645 6.97753 7.19212 7.19186C6.97779 7.40619 6.85738 7.69688 6.85738 7.99998C6.85738 8.30309 6.97779 8.59378 7.19212 8.8081C7.40645 9.02243 7.69714 9.14284 8.00024 9.14284ZM11.4288 9.14284C11.7319 9.14284 12.0226 9.02243 12.2369 8.8081C12.4513 8.59378 12.5717 8.30309 12.5717 7.99998C12.5717 7.69688 12.4513 7.40619 12.2369 7.19186C12.0226 6.97753 11.7319 6.85712 11.4288 6.85712C11.1257 6.85712 10.835 6.97753 10.6207 7.19186C10.4064 7.40619 10.286 7.69688 10.286 7.99998C10.286 8.30309 10.4064 8.59378 10.6207 8.8081C10.835 9.02243 11.1257 9.14284 11.4288 9.14284Z"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nemo autem
+      tempora unde ex, voluptate officia accusamus aut hic optio, quos eius odit
+      quibusdam magni officiis facere voluptatem perspiciatis harum, rerum
+      blanditiis assumenda. Non repudiandae nulla iure officiis, maxime possimus
+      labore obcaecati officia repellendus tempora similique maiores aperiam
+      aut. Ratione a quia magnam recusandae esse labore, dignissimos vero nemo
+      laborum earum quidem nostrum at quis illum dicta autem ad. Perspiciatis
+      repudiandae delectus blanditiis itaque, minus sed dolor sapiente
+      architecto facere eveniet sequi illum tenetur nostrum veniam. Praesentium
+      eligendi temporibus iure tempora corrupti explicabo ratione beatae nam
+      obcaecati qui, accusamus id ex repudiandae recusandae mollitia! Cupiditate
+      aliquid culpa soluta facere nulla tempora iure est voluptate vero quae
+      repudiandae, ab repellendus sint perspiciatis quod veniam consectetur
+      labore quidem hic deserunt at nam aperiam minima. Doloribus eum, illo
+      iste, sed sequi exercitationem totam accusamus velit eligendi nihil
+      provident, porro quaerat? Tempora quisquam rerum aperiam ipsa deserunt
+      officia consequatur, minus autem illum quaerat hic sunt ratione fugit
+      provident ea, eos animi ad? Numquam nesciunt incidunt necessitatibus
+      blanditiis maxime sunt officia ea eaque, nihil minus obcaecati soluta.
+      Eius quam consectetur libero adipisci porro praesentium inventore nulla
+      sint, asperiores consequuntur tempore fugit perferendis officiis,
+      molestias sed rem necessitatibus. Quis aliquam provident omnis voluptas
+      libero? Temporibus, officiis fuga dicta delectus suscipit accusantium!
+      Numquam itaque vero, voluptatem at accusamus minima, natus repellendus
+      earum consequatur sequi hic laboriosam optio illum repudiandae corporis,
+      officiis dolore! Voluptate repudiandae cumque ut mollitia accusamus
+      officiis magni consequatur exercitationem asperiores, animi tenetur, error
+      sint omnis, sapiente eveniet eum adipisci? Quibusdam molestiae officiis
+      commodi fugiat, ullam, quasi omnis cupiditate sed iusto labore in magni
+      est recusandae, repellendus vero numquam natus nobis necessitatibus enim
+      perferendis ipsam dolores? Reprehenderit, veniam quasi. Aliquid molestias
+      beatae eius quam iure nihil iste dicta, eveniet incidunt tenetur ducimus
+      veniam adipisci magnam sit excepturi porro totam maxime soluta tempora!
+      Corrupti magni labore commodi! Sit vitae consequatur sapiente, voluptatem
+      nobis dolores beatae exercitationem consequuntur modi similique impedit
+      omnis ipsa enim saepe voluptatibus facilis molestias quis, tempore cumque
+      ducimus excepturi dicta? Ad sint eveniet, quae hic ratione est alias
+      corporis pariatur accusantium ab, nam nesciunt delectus reprehenderit
+      incidunt, praesentium facilis at sequi doloribus voluptatem ex quisquam
+      magni magnam deleniti? Explicabo, dignissimos voluptas. Beatae, omnis
+      optio porro officia sequi earum ut facere doloremque distinctio mollitia
+      natus corrupti eveniet. Qui officiis in facilis iure numquam eos
+      repudiandae maiores, laborum, porro soluta libero, at eius corporis fugiat
+      commodi. Excepturi, culpa laudantium modi, fuga neque facilis quibusdam
+      autem unde velit, ab atque? Quasi distinctio voluptate quo, atque quis,
+      reprehenderit unde non provident vitae ipsum laborum explicabo asperiores
+      similique inventore, ab quibusdam quisquam. Rerum illo suscipit at ut rem
+      veritatis inventore? Fuga voluptate minus cumque laborum architecto, sed
+      officia id molestiae molestias nostrum ut, quos dolor recusandae beatae
+      vero magnam minima maxime eaque deserunt atque nam enim tempore est? Eum
+      aspernatur velit iure porro qui vitae eveniet animi explicabo natus
+      asperiores? Soluta nam harum totam dolore. Minus consectetur quae, neque
+      ad molestias corrupti quis quas necessitatibus officiis ipsam temporibus
+      alias! Dolorem vel repellat, alias esse modi exercitationem, qui velit
+      perferendis quasi quod sed molestias dolorum itaque ullam ratione tempora
+      accusantium. Animi, vero cum. Id modi tenetur, distinctio pariatur velit
+      vitae fugiat cum atque, eaque nisi aliquam nemo aliquid deserunt ipsam
+      fugit illo. Cumque ducimus aliquam unde id voluptas nihil non quidem
+      voluptate ab nesciunt? Ipsam, assumenda, illum, impedit corrupti neque
+      error exercitationem cupiditate facilis minima nobis ullam debitis!
+      Praesentium earum unde debitis velit itaque ad culpa voluptate aut! Quis
+      sed at repellat molestias vero corporis consectetur dolor soluta maiores
+      velit, voluptates aperiam excepturi enim magnam iusto beatae neque cum?
+      Esse id incidunt iste impedit autem sapiente rerum reprehenderit ea, culpa
+      illum odio voluptas numquam omnis quo perferendis asperiores! Provident
+      voluptatum consequuntur quas neque autem laborum perspiciatis doloremque
+      saepe. Reprehenderit aut, quidem fugit aliquam aspernatur commodi
+      recusandae placeat quisquam saepe animi ratione ex ea vero dolorem magnam
+      blanditiis est dolorum voluptates, dicta ipsam nobis distinctio mollitia
+      explicabo aperiam? Nemo, libero odit et fuga quia, quaerat ea suscipit,
+      dolor amet aliquam enim quod cum debitis! Ut aliquam hic totam ipsam dicta
+      nisi voluptatem magnam accusamus quos dolor, beatae fugit amet voluptatum?
+      Cupiditate reiciendis, doloremque quia distinctio dolor ipsam quidem,
+      eveniet repudiandae officiis minima, quod mollitia cumque facere qui dicta
+      rerum aliquid nulla fugiat totam quasi in architecto molestias.
+      Necessitatibus est explicabo nam optio, id libero animi soluta
+      reprehenderit distinctio quibusdam tempore, ipsum laboriosam! Doloremque
+      earum tempore nemo voluptatem reprehenderit animi veniam voluptate
+      exercitationem libero? Laudantium cum commodi dicta nihil labore repellat
+      minima minus repellendus, reprehenderit eligendi accusamus. Ipsum numquam
+      placeat, repellat, illo natus non alias laboriosam rerum, voluptatem vero
+      reiciendis. Ipsam illo eligendi iure enim assumenda itaque earum ex sed
+      doloribus delectus? Saepe corrupti hic, harum sed cum tempora culpa eos
+      unde, laborum sequi pariatur quasi nulla rerum dolorem fuga sapiente non
+      nemo, nobis est qui dolorum placeat consectetur. Itaque minus vel eius,
+      iusto quibusdam, placeat suscipit voluptatum possimus quod, facere eveniet
+      omnis? Omnis laboriosam numquam corporis impedit necessitatibus dolor
+      nostrum ipsa nisi ullam blanditiis, fuga doloribus reprehenderit unde
+      cupiditate dicta natus maxime doloremque odit voluptate nihil vel labore?
+      Corporis et eius fugit quia. Enim delectus deserunt cum autem pariatur
+      suscipit numquam ducimus. Provident quae delectus velit aperiam. Quasi
+      facere maxime quibusdam nesciunt quam! Hic beatae corrupti officia
+      provident qui repellat obcaecati quidem. Suscipit maiores recusandae harum
+      ipsum error eum, quidem, nemo doloribus delectus voluptatem consequatur
+      accusantium eos! Aperiam modi quia quaerat officiis fugit ex deleniti.
+      Culpa voluptas rem a velit magnam impedit porro ullam architecto suscipit
+      nulla cum nemo soluta aspernatur doloribus atque distinctio aliquid
+      tempore dignissimos, vel aut libero praesentium? Doloribus, nisi! Adipisci
+      nihil ab sunt! Quidem quo aliquid est nostrum, fugit ipsa non esse
+      mollitia dolorum! Eius ipsum corrupti itaque, quam fuga animi velit
+      aperiam omnis ratione tenetur quibusdam architecto tempora non. Laborum ut
+      dignissimos numquam dolore quis tenetur minima porro iusto a
+      necessitatibus perferendis non officia, sunt, tempore accusamus pariatur
+      quibusdam quas omnis in alias recusandae distinctio quaerat? Ipsa porro
+      molestiae recusandae voluptas dignissimos, libero aspernatur error.
+    </main>
+  </body>
+</html>
