@@ -30,6 +30,7 @@ module.exports = {
             300: '#E6E8ED',
             400: '#F5F7FD',
             500: '#F7F7FB',
+            600: '#DEE0E5',
           },
         },
       },

@@ -231,7 +231,7 @@
     <!-- MAIN -->
     <main>
       <!-- Hero -->
-      <section id="hero" class="pt-5">
+      <section id="hero" class="pt-5 md:px-10 lg:px-0">
         <div
           class="max-w-base mx-auto grid lg:grid-cols-5 gap-5 text-center px-5"
         >
@@ -1177,7 +1177,7 @@
             </div>
             <!-- Attention! -->
             <div
-              class="w-fit flex items-center gap-2 bg-white text-brand-dark/50 text-sm rounded-full p-1"
+              class="w-fit flex items-center gap-2 bg-white text-brand-dark/50 text-xs xs:text-sm rounded-full p-1"
             >
               <svg
                 width="24"
@@ -1209,6 +1209,135 @@
       <section id="prices" class="bg-brand-gray-500">
         <div class="max-w-base mx-auto px-5">
           <h2>Доступные цены</h2>
+        </div>
+        <div class="lg:border-y border-brand-gray-600 mt-5 lg:mt-6">
+          <div
+            class="max-w-base mx-auto lg:flex lg:divide-x divide-brand-gray-600 px-5"
+          >
+            <!-- Left -->
+            <div class="flex-1 space-y-8 overflow-auto lg:pr-10 lg:py-10">
+              <!-- Tabs -->
+              <div class="flex items-center gap-5 lg:gap-10">
+                <!-- Tab Buttons -->
+                <div class="scroll-none w-full lg:max-w-[45rem] overflow-auto">
+                  <div
+                    class="min-w-max flex flex-wrap items-center font-medium text-sm lg:text-base"
+                  >
+                    <button
+                      class="h-8 lg:h-10 bg-brand-dark text-white rounded-full px-5"
+                    >
+                      Холодильники
+                    </button>
+                    <button
+                      class="h-8 lg:h-10 text-brand-dark border border-brand-dark rounded-full hover:bg-brand-dark hover:text-white transition-all duration-200 px-5"
+                    >
+                      Стиральные машины
+                    </button>
+                    <button
+                      class="h-8 lg:h-10 text-brand-dark border border-brand-dark rounded-full hover:bg-brand-dark hover:text-white transition-all duration-200 px-5"
+                    >
+                      Посудомойки
+                    </button>
+                    <button
+                      class="h-8 lg:h-10 text-brand-dark border border-brand-dark rounded-full hover:bg-brand-dark hover:text-white transition-all duration-200 px-5"
+                    >
+                      Духовые шкафы
+                    </button>
+                    <button
+                      class="h-8 lg:h-10 text-brand-dark border border-brand-dark rounded-full hover:bg-brand-dark hover:text-white transition-all duration-200 px-5"
+                    >
+                      Кофемашины
+                    </button>
+                  </div>
+                </div>
+                <!-- Navigating Buttons -->
+                <div class="flex items-center gap-2">
+                  <!-- Left -->
+                  <button
+                    class="w-10 h-10 shrink-0 group grid place-content-center bg-white rounded-full hover:bg-brand-dark transition-all duration-200"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="fill-brand-dark group-hover:fill-white transition-all duration-200"
+                    >
+                      <path
+                        d="M9.99984 3.33333L11.1748 4.50833L7.2062 8.48407C6.95457 8.73616 7.13311 9.16666 7.4893 9.16666H16.6665V10.8333H7.4893C7.13311 10.8333 6.95457 11.2638 7.2062 11.5159L11.1748 15.4917L9.99984 16.6667L4.04028 10.7071C3.64975 10.3166 3.64975 9.68341 4.04028 9.29289L9.99984 3.33333Z"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Right -->
+                  <button
+                    class="w-10 h-10 shrink-0 group grid place-content-center bg-white rounded-full hover:bg-brand-dark transition-all duration-200"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="fill-brand-dark group-hover:fill-white transition-all duration-200"
+                    >
+                      <path
+                        d="M10.0002 3.33333L8.82516 4.50833L12.7938 8.48407C13.0454 8.73616 12.8669 9.16666 12.5107 9.16666H3.3335V10.8333H12.5107C12.8669 10.8333 13.0454 11.2638 12.7938 11.5159L8.82516 15.4917L10.0002 16.6667L15.9597 10.7071C16.3502 10.3166 16.3502 9.68341 15.9597 9.29289L10.0002 3.33333Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Right -->
+            <div class="pt-5 sm:pt-10 lg:p-10">
+              <div
+                class="lg:w-[27rem] relative bg-white text-center rounded-3xl lg:rounded-32 overflow-hidden"
+              >
+                <div class="pt-5 xs:pt-7 lg:pt-12 px-10">
+                  <div class="space-y-5">
+                    <h3 class="text-2xl sm:text-3xl md:text-4xl xl:text-32">
+                      Заявка <br class="hidden lg:block" />
+                      на выездной <br class="lg:hidden" />
+                      ремонт
+                    </h3>
+                    <p
+                      class="max-w-md lg:max-w-none mx-auto sm:text-lg lg:text-base text-brand-dark/50 lg:px-6"
+                    >
+                      Оставьте заявку, администратор свяжется с вами, определит
+                      дату и удобное время выездного ремонта
+                    </p>
+                  </div>
+                  <!-- Link Button -->
+                  <button
+                    class="h-12 w-fit mx-auto group flex items-center gap-2 bg-brand-blue text-white font-medium rounded-full mt-8 pl-4 pr-3"
+                  >
+                    Оставить заявку
+                    <svg
+                      width="17"
+                      height="16"
+                      viewBox="0 0 17 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="group-hover:translate-x-1.5 transition-all duration-200"
+                    >
+                      <path
+                        d="M6.69322 10.5867L9.27988 8L6.69322 5.41333C6.63149 5.35161 6.58253 5.27834 6.54913 5.19769C6.51573 5.11705 6.49853 5.03062 6.49853 4.94333C6.49853 4.85605 6.51573 4.76961 6.54913 4.68897C6.58253 4.60833 6.63149 4.53505 6.69322 4.47333C6.75494 4.41161 6.82821 4.36265 6.90885 4.32925C6.9895 4.29584 7.07593 4.27865 7.16322 4.27865C7.2505 4.27865 7.33693 4.29584 7.41758 4.32925C7.49822 4.36265 7.57149 4.41161 7.63322 4.47333L10.6932 7.53333C10.755 7.59501 10.804 7.66827 10.8375 7.74892C10.871 7.82956 10.8882 7.91602 10.8882 8.00333C10.8882 8.09064 10.871 8.1771 10.8375 8.25775C10.804 8.3384 10.755 8.41166 10.6932 8.47333L7.63322 11.5333C7.57154 11.5951 7.49828 11.6442 7.41763 11.6776C7.33698 11.7111 7.25053 11.7283 7.16322 11.7283C7.0759 11.7283 6.98945 11.7111 6.9088 11.6776C6.82815 11.6442 6.75489 11.5951 6.69322 11.5333C6.43988 11.2733 6.43322 10.8467 6.69322 10.5867Z"
+                        fill="#fff"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Girls Image -->
+                <img
+                  src="./assets/images/img-girl.png"
+                  alt="Image"
+                  class="w-full mt-auto"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
