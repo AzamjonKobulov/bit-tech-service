@@ -753,6 +753,12 @@ section{
 .h-4{
   height: 1rem;
 }
+.h-72{
+  height: 18rem;
+}
+.h-\[4\.5rem\]{
+  height: 4.5rem;
+}
 .w-10{
   width: 2.5rem;
 }
@@ -920,6 +926,10 @@ section{
 }
 .rounded-xl{
   border-radius: 0.75rem;
+}
+.rounded-b-3xl{
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
 }
 .border{
   border-width: 1px;
@@ -1216,6 +1226,16 @@ input[type='radio']:checked + label .toggle-target{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group:hover .group-hover\:translate-x-5{
+  --tw-translate-x: 1.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:translate-x-3{
+  --tw-translate-x: 0.75rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group:hover .group-hover\:fill-brand-blue{
   fill: #0060FE;
 }
@@ -1261,6 +1281,10 @@ input[type='radio']:checked + label .toggle-target{
 
   .xs\:h-8{
     height: 2rem;
+  }
+
+  .xs\:h-\[4\.5rem\]{
+    height: 4.5rem;
   }
 
   .xs\:w-3{
@@ -1515,6 +1539,11 @@ input[type='radio']:checked + label .toggle-target{
 
   .lg\:rounded-3xl{
     border-radius: 1.5rem;
+  }
+
+  .lg\:rounded-b-32{
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
   }
 
   .lg\:border-y{
