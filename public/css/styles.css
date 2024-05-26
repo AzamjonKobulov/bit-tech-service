@@ -985,6 +985,10 @@ section{
   border-bottom-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
 }
+.rounded-t-3xl{
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
 .border{
   border-width: 1px;
 }
@@ -1674,6 +1678,11 @@ input[type='radio']:checked + label .toggle-target{
   .lg\:rounded-b-32{
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
+  }
+
+  .lg\:rounded-t-32{
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
   }
 
   .lg\:border-y{
