@@ -1673,21 +1673,6 @@ input[type='radio']:checked + label .toggle-target{
     height: 7rem;
   }
 
-  .lg\:h-auto{
-    height: auto;
-  }
-
-  .lg\:h-full{
-    height: 100%;
-  }
-
-  @media (min-width: 64rem){
-
-    .lg\:lg\:h-\[36\.125rem\]{
-      height: 36.125rem;
-    }
-  }
-
   .lg\:w-96{
     width: 24rem;
   }
