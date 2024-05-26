@@ -793,6 +793,9 @@ section{
 .w-4{
   width: 1rem;
 }
+.w-96{
+  width: 24rem;
+}
 .min-w-max{
   min-width: -moz-max-content;
   min-width: max-content;
@@ -1105,6 +1108,9 @@ section{
 .leading-6{
   line-height: 1.5rem;
 }
+.leading-7{
+  line-height: 1.75rem;
+}
 .text-brand-dark{
   --tw-text-opacity: 1;
   color: rgb(29 29 29 / var(--tw-text-opacity));
@@ -1296,6 +1302,10 @@ input[type='radio']:checked + label .toggle-target{
     padding-left: 1rem;
   }
 
+  .xs\:pt-7{
+    padding-top: 1.75rem;
+  }
+
   .xs\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1407,6 +1417,10 @@ input[type='radio']:checked + label .toggle-target{
     padding-top: 3rem;
   }
 
+  .md\:pt-7{
+    padding-top: 1.75rem;
+  }
+
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1467,6 +1481,10 @@ input[type='radio']:checked + label .toggle-target{
 
   .lg\:w-\[7rem\]{
     width: 7rem;
+  }
+
+  .lg\:w-96{
+    width: 24rem;
   }
 
   .lg\:max-w-\[45rem\]{
@@ -1545,6 +1563,10 @@ input[type='radio']:checked + label .toggle-target{
     padding-top: 3rem;
   }
 
+  .lg\:pt-5{
+    padding-top: 1.25rem;
+  }
+
   .lg\:text-32{
     font-size: 2rem;
   }
@@ -1559,8 +1581,22 @@ input[type='radio']:checked + label .toggle-target{
     line-height: 1.5rem;
   }
 
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
   .lg\:leading-5{
     line-height: 1.25rem;
+  }
+
+  .lg\:leading-4{
+    line-height: 1rem;
   }
 }
 
@@ -1568,6 +1604,18 @@ input[type='radio']:checked + label .toggle-target{
 
   .xl\:h-\[4\.5rem\]{
     height: 4.5rem;
+  }
+
+  .xl\:h-1\/2{
+    height: 50%;
+  }
+
+  .xl\:h-12{
+    height: 3rem;
+  }
+
+  .xl\:w-\[27rem\]{
+    width: 27rem;
   }
 
   .xl\:gap-16{
@@ -1592,8 +1640,22 @@ input[type='radio']:checked + label .toggle-target{
     padding-right: 3.5rem;
   }
 
+  .xl\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .xl\:px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .xl\:pr-16{
     padding-right: 4rem;
+  }
+
+  .xl\:pt-7{
+    padding-top: 1.75rem;
   }
 
   .xl\:text-40{
@@ -1608,6 +1670,22 @@ input[type='radio']:checked + label .toggle-target{
   .xl\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .xl\:text-32{
+    font-size: 2rem;
+  }
+
+  .xl\:leading-6{
+    line-height: 1.5rem;
+  }
+
+  .xl\:leading-5{
+    line-height: 1.25rem;
+  }
+
+  .xl\:leading-10{
+    line-height: 2.5rem;
   }
 }
 
