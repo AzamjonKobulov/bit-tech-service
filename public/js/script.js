@@ -120,7 +120,7 @@ function renderTabsContent(tabIdx, tabsData) {
       />
       <label
         for="fridge${tabIdx}${idx}"
-        class="h-20 flex items-center justify-between gap-4 rounded-xl lg:rounded-3xl cursor-pointer p-5"
+        class="h-20 flex items-center justify-between gap-4 rounded-xl lg:rounded-3xl cursor-pointer p-3 sm:p-5"
       >
         <!-- Check & Texts -->
         <div class="flex items-center gap-4">
