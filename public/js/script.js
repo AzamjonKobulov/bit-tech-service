@@ -241,3 +241,46 @@ var swiper = new Swiper('.swiper-why-choose-use', {
     },
   },
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cases = document.querySelectorAll('.useful-case-item');
+  const casesTexts = document.querySelectorAll('.useful-case-texts');
+  const imageWrappers = document.querySelectorAll(
+    '.useful-case-item .image-wrapper'
+  );
+
+  // Initial state: First case is active
+  cases.forEach((item, i) => {
+    if (i === 0) {
+      item.classList.add('flex-1');
+      casesTexts[i].classList.remove('hidden');
+      imageWrappers[i].classList.remove('col-span-5');
+      imageWrappers[i].classList.add('col-span-2');
+      imageWrappers[i].classList.add('h-60');
+    } else {
+      item.classList.remove('flex-1');
+      casesTexts[i].classList.add('hidden');
+      imageWrappers[i].classList.add('col-span-5');
+      imageWrappers[i].classList.remove('col-span-2');
+      imageWrappers[i].classList.remove('h-60');
+    }
+  });
+
+  // Event listeners for case items
+  cases.forEach((caseItem, index) => {
+    caseItem.addEventListener('click', () => {
+      cases.forEach((item, i) => {
+        item.classList.remove('flex-1');
+        casesTexts[i].classList.add('hidden');
+        imageWrappers[i].classList.add('col-span-5');
+        imageWrappers[i].classList.remove('col-span-2');
+        imageWrappers[i].classList.remove('h-60');
+      });
+      caseItem.classList.add('flex-1');
+      casesTexts[index].classList.remove('hidden');
+      imageWrappers[index].classList.remove('col-span-5');
+      imageWrappers[index].classList.add('col-span-2');
+      imageWrappers[index].classList.add('h-60');
+    });
+  });
+});

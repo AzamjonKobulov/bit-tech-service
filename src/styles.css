@@ -57,3 +57,31 @@ input[type='radio']:checked + label .toggle-target {
 .tab-button.active {
   @apply bg-brand-dark text-white;
 }
+
+.useful-case-item {
+  flex: 0 0 120px;
+  transition: flex 0.5s ease;
+}
+
+.useful-case-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.useful-case-item.flex-1 {
+  flex: 1;
+}
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .useful-case-item {
+    flex: 0 0 auto; /* Resetting flex value */
+    transition: flex 0.5s ease; /* Transition for flex property */
+  }
+
+  .useful-case-item .image-wrapper,
+  .useful-case-item .useful-case-texts {
+    transition: height 0.5s ease; /* Transition for height property */
+  }
+}
