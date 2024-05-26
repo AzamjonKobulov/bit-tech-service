@@ -1212,12 +1212,14 @@
         </div>
         <div class="lg:border-y border-brand-gray-600 mt-5 lg:mt-6">
           <div
-            class="max-w-base mx-auto lg:flex lg:divide-x divide-brand-gray-600 px-5"
+            class="max-w-base mx-auto lg:flex lg:divide-x divide-brand-gray-600 sm:px-5"
           >
             <!-- Left -->
             <div class="flex-1 space-y-8 overflow-auto lg:pr-10 lg:py-10">
               <!-- Tabs -->
-              <div class="flex items-center gap-5 lg:gap-10">
+              <div
+                class="flex flex-col sm:flex-row items-center gap-5 lg:gap-10"
+              >
                 <!-- Tab Buttons -->
                 <div
                   class="scroll-none w-full lg:max-w-[45rem] overflow-auto"
@@ -1227,7 +1229,7 @@
                     class="min-w-max flex flex-wrap items-center font-medium text-sm lg:text-base"
                   >
                     <button
-                      class="tab-button h-8 lg:h-10 bg-brand-dark text-white border border-brand-dark hover:bg-brand-dark hover:text-white hover:transition-all hover:duration-200 rounded-full px-5"
+                      class="tab-button h-8 lg:h-10 bg-brand-dark text-white border border-brand-dark hover:bg-brand-dark hover:text-white hover:transition-all hover:duration-200 rounded-full ml-5 sm:ml-0 px-5"
                       data-tab="1"
                     >
                       Холодильники
@@ -1251,7 +1253,7 @@
                       Духовые шкафы
                     </button>
                     <button
-                      class="tab-button h-8 lg:h-10 text-brand-dark border border-brand-dark rounded-full hover:bg-brand-dark hover:text-white hover:transition-all hover:duration-200 px-5"
+                      class="tab-button h-8 lg:h-10 text-brand-dark border border-brand-dark rounded-full hover:bg-brand-dark hover:text-white hover:transition-all hover:duration-200 mr-5 sm:mr-0 px-5"
                       data-tab="5"
                     >
                       Кофемашины
@@ -1299,7 +1301,7 @@
                 </div>
               </div>
               <!-- Tabs Contents -->
-              <div class="bg-white rounded-3xl lg:rounded-32">
+              <div class="bg-white rounded-3xl lg:rounded-32 px-5 sm:px-0">
                 <div class="p-2">
                   <!-- Tab Content 1 -->
                   <ul class="tabs-content" id="tabs-content-1"></ul>
@@ -1334,7 +1336,7 @@
               </div>
             </div>
             <!-- Right -->
-            <div class="pt-5 sm:pt-10 lg:p-10">
+            <div class="pt-5 sm:pt-10 lg:p-10 px-5 sm:px-0">
               <div
                 class="lg:w-96 xl:w-[27rem] relative bg-white text-center rounded-3xl lg:rounded-32 overflow-hidden"
               >
@@ -1396,7 +1398,9 @@
         <div class="h-px bg-brand-gray-300 mt-6"></div>
 
         <!-- Items -->
-        <div class="max-w-min overflow-x-scroll">
+        <div
+          class="max-w-min 2xl:max-w-base mx-auto overflow-x-scroll 2xl:overflow-x-visible"
+        >
           <div
             class="min-w-max flex items-stretch gap-5 text-center mt-8 lg:mt-16 px-5"
           >

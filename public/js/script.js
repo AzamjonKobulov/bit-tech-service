@@ -42,15 +42,17 @@ var swiper = new Swiper('.swiper-services', {
   },
 });
 
+// Function to update custom pagination
 function updateCustomPagination(swiper) {
-  const current = swiper.realIndex + 1;
-  const total = swiper.slides.length;
-  const paginationElement = document.querySelectorAll(
-    '.swiper-pagination-custom'
-  );
-  paginationElement.forEach((pagination) => {
-    pagination.textContent = `${current} / ${total}`;
-  });
+  const totalSlides = swiper.slides.length;
+  const visibleSlides = Math.floor(swiper.params.slidesPerView || 1);
+  const currentPage = swiper.realIndex + visibleSlides;
+
+  document
+    .querySelectorAll('.swiper-pagination-custom')
+    .forEach((pagination) => {
+      pagination.textContent = `${currentPage} / ${totalSlides}`;
+    });
 }
 
 const tabsData = [
