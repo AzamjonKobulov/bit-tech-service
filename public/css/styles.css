@@ -1034,6 +1034,10 @@ section{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.px-2\.5{
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
 .pb-96{
   padding-bottom: 24rem;
 }
@@ -1249,6 +1253,10 @@ input[type='radio']:checked + label .toggle-target{
     height: 1.5rem;
   }
 
+  .xs\:h-8{
+    height: 2rem;
+  }
+
   .xs\:w-3{
     width: 0.75rem;
   }
@@ -1272,6 +1280,16 @@ input[type='radio']:checked + label .toggle-target{
   .xs\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .xs\:px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .xs\:px-3\.5{
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
   }
 
   .xs\:pl-4{
@@ -1512,6 +1530,11 @@ input[type='radio']:checked + label .toggle-target{
   .lg\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .lg\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .lg\:pr-10{
