@@ -1590,6 +1590,10 @@ input[type='radio']:checked + label .toggle-target{
     height: 7rem;
   }
 
+  .lg\:h-\[2\.125rem\]{
+    height: 2.125rem;
+  }
+
   .lg\:w-96{
     width: 24rem;
   }
