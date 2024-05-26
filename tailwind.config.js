@@ -15,6 +15,7 @@ module.exports = {
         base: '90rem',
       },
       spacing: {
+        177: '11.0625rem',
         200: '12.5rem',
       },
       fontFamily: {
@@ -53,6 +54,7 @@ module.exports = {
           'linear-gradient(180deg, #FFE6EB 0%, #FFDBE2 100%);        ',
         'blue-gradient':
           'linear-gradient(0deg, #0060FE, #0060FE), linear-gradient(180deg, #0060FE 0%, rgba(0, 96, 254, 0.8) 100%), linear-gradient(180deg, #0060FE 0%, #317FFE 100%);',
+        brands: "url('../assets/images/bg-brands.png')",
       },
     },
   },

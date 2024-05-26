@@ -781,6 +781,9 @@ section{
 .h-px{
   height: 1px;
 }
+.h-24{
+  height: 6rem;
+}
 .w-1{
   width: 0.25rem;
 }
@@ -824,6 +827,9 @@ section{
 .w-full{
   width: 100%;
 }
+.w-177{
+  width: 11.0625rem;
+}
 .min-w-max{
   min-width: -moz-max-content;
   min-width: max-content;
@@ -866,6 +872,9 @@ section{
 .list-disc{
   list-style-type: disc;
 }
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 .flex-col{
   flex-direction: column;
 }
@@ -901,6 +910,9 @@ section{
 }
 .gap-7{
   gap: 1.75rem;
+}
+.gap-3{
+  gap: 0.75rem;
 }
 .space-y-1 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
@@ -1026,17 +1038,29 @@ section{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-white\/20{
+  background-color: rgb(255 255 255 / 0.2);
+}
 .bg-base-gradient{
   background-image: linear-gradient(180deg, #F7F7FA 0%, #F4F7FD 100%);;
 }
 .bg-blue-gradient{
   background-image: linear-gradient(0deg, #0060FE, #0060FE), linear-gradient(180deg, #0060FE 0%, rgba(0, 96, 254, 0.8) 100%), linear-gradient(180deg, #0060FE 0%, #317FFE 100%);;
 }
+.bg-brands{
+  background-image: url('../assets/images/bg-brands.png');
+}
 .bg-pink-gradient{
   background-image: linear-gradient(180deg, #FFE6EB 0%, #FFDBE2 100%);        ;
 }
 .bg-swiper-gradient{
   background-image: linear-gradient(180deg, #F7F7FA 0%, #F4F7FD 100%);;
+}
+.bg-right{
+  background-position: right;
+}
+.bg-no-repeat{
+  background-repeat: no-repeat;
 }
 .fill-brand-blue{
   fill: #0060FE;
@@ -1062,9 +1086,6 @@ section{
 }
 .p-5{
   padding: 1.25rem;
-}
-.p-6{
-  padding: 1.5rem;
 }
 .p-7{
   padding: 1.75rem;
@@ -1109,13 +1130,13 @@ section{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-.py-7{
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.py-7{
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 .pb-5{
   padding-bottom: 1.25rem;
@@ -1138,20 +1159,20 @@ section{
 .pl-5{
   padding-left: 1.25rem;
 }
+.pl-6{
+  padding-left: 1.5rem;
+}
 .pr-3{
   padding-right: 0.75rem;
+}
+.pr-4{
+  padding-right: 1rem;
 }
 .pt-5{
   padding-top: 1.25rem;
 }
 .pt-8{
   padding-top: 2rem;
-}
-.pl-6{
-  padding-left: 1.5rem;
-}
-.pr-4{
-  padding-right: 1rem;
 }
 .text-center{
   text-align: center;
@@ -1459,8 +1480,16 @@ input[type='radio']:checked + label .toggle-target{
     width: auto;
   }
 
+  .sm\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .sm\:flex-row{
     flex-direction: row;
+  }
+
+  .sm\:gap-5{
+    gap: 1.25rem;
   }
 
   .sm\:rounded-3xl{
@@ -1596,12 +1625,12 @@ input[type='radio']:checked + label .toggle-target{
     height: 2.5rem;
   }
 
-  .lg\:h-\[7rem\]{
-    height: 7rem;
-  }
-
   .lg\:h-\[2\.125rem\]{
     height: 2.125rem;
+  }
+
+  .lg\:h-\[7rem\]{
+    height: 7rem;
   }
 
   .lg\:w-96{
@@ -1742,6 +1771,10 @@ input[type='radio']:checked + label .toggle-target{
 
   .xl\:w-\[27rem\]{
     width: 27rem;
+  }
+
+  .xl\:grid-cols-7{
+    grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
   .xl\:gap-16{
