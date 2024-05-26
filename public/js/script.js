@@ -125,13 +125,13 @@ function renderTabsContent(tabIdx, tabsData) {
         <!-- Check & Texts -->
         <div class="flex items-center gap-4">
           <div
-            class="w-6 h-6 shrink-0 border border-brand-dark/10 rounded-full"
+            class="w-4 h-4 xs:w-6 xs:h-6 shrink-0 border border-brand-dark/10 rounded-full"
           >
             <div
-              class="toggle-target w-6 h-6 shrink-0 hidden items-center justify-center bg-brand-blue rounded-full"
+              class="toggle-target w-4 h-4 xs:w-6 xs:h-6 shrink-0 hidden items-center justify-center bg-brand-blue rounded-full"
             >
               <span
-                class="w-3 h-3 shrink-0 bg-white rounded-full"
+                class="w-1.5 h-1.5 xs:w-3 xs:h-3 shrink-0 bg-white rounded-full"
               ></span>
             </div>
           </div>
