@@ -1113,6 +1113,10 @@ section{
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
 }
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
 .pb-5{
   padding-bottom: 1.25rem;
 }
@@ -1142,6 +1146,12 @@ section{
 }
 .pt-8{
   padding-top: 2rem;
+}
+.pl-6{
+  padding-left: 1.5rem;
+}
+.pr-4{
+  padding-right: 1rem;
 }
 .text-center{
   text-align: center;
