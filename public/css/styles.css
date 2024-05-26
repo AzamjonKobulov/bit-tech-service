@@ -1088,6 +1088,9 @@ section{
 .p-7{
   padding: 1.75rem;
 }
+.p-1\.5{
+  padding: 0.375rem;
+}
 .px-0{
   padding-left: 0px;
   padding-right: 0px;
@@ -1677,6 +1680,10 @@ input[type='radio']:checked + label .toggle-target{
     padding: 2rem;
   }
 
+  .lg\:p-2{
+    padding: 0.5rem;
+  }
+
   .lg\:px-0{
     padding-left: 0px;
     padding-right: 0px;
@@ -1731,6 +1738,11 @@ input[type='radio']:checked + label .toggle-target{
   .lg\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .lg\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .lg\:leading-5{
