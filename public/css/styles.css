@@ -714,9 +714,6 @@ section{
 .h-10{
   height: 2.5rem;
 }
-.h-12{
-  height: 3rem;
-}
 .h-14{
   height: 3.5rem;
 }
@@ -725,6 +722,9 @@ section{
 }
 .h-200{
   height: 12.5rem;
+}
+.h-3{
+  height: 0.75rem;
 }
 .h-6{
   height: 1.5rem;
@@ -753,6 +753,9 @@ section{
 .w-20{
   width: 5rem;
 }
+.w-3{
+  width: 0.75rem;
+}
 .w-6{
   width: 1.5rem;
 }
@@ -772,6 +775,9 @@ section{
 .min-w-max{
   min-width: -moz-max-content;
   min-width: max-content;
+}
+.max-w-2xl{
+  max-width: 42rem;
 }
 .max-w-80{
   max-width: 20rem;
@@ -817,6 +823,9 @@ section{
 }
 .gap-2{
   gap: 0.5rem;
+}
+.gap-4{
+  gap: 1rem;
 }
 .gap-5{
   gap: 1.25rem;
@@ -876,11 +885,17 @@ section{
 .overflow-hidden{
   overflow: hidden;
 }
+.whitespace-nowrap{
+  white-space: nowrap;
+}
 .rounded-3xl{
   border-radius: 1.5rem;
 }
 .rounded-full{
   border-radius: 9999px;
+}
+.rounded-xl{
+  border-radius: 0.75rem;
 }
 .border{
   border-width: 1px;
@@ -892,6 +907,9 @@ section{
 .border-brand-dark{
   --tw-border-opacity: 1;
   border-color: rgb(29 29 29 / var(--tw-border-opacity));
+}
+.border-brand-dark\/10{
+  border-color: rgb(29 29 29 / 0.1);
 }
 .border-brand-gray-300{
   --tw-border-opacity: 1;
@@ -942,6 +960,9 @@ section{
 }
 .p-1{
   padding: 0.25rem;
+}
+.p-2{
+  padding: 0.5rem;
 }
 .p-5{
   padding: 1.25rem;
@@ -1010,6 +1031,9 @@ section{
 .pt-5{
   padding-top: 1.25rem;
 }
+.pt-7{
+  padding-top: 1.75rem;
+}
 .pt-8{
   padding-top: 2rem;
 }
@@ -1047,6 +1071,9 @@ section{
 .leading-4{
   line-height: 1rem;
 }
+.leading-5{
+  line-height: 1.25rem;
+}
 .leading-6{
   line-height: 1.5rem;
 }
@@ -1059,6 +1086,9 @@ section{
 }
 .text-brand-dark\/50{
   color: rgb(29 29 29 / 0.5);
+}
+.text-brand-dark\/80{
+  color: rgb(29 29 29 / 0.8);
 }
 .text-white{
   --tw-text-opacity: 1;
@@ -1083,6 +1113,15 @@ section{
 .scroll-none::-webkit-scrollbar{
   height: 0px;
   width: 0px;
+}
+
+.option input[type='radio']:checked + label{
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 247 252 / var(--tw-bg-opacity));
+}
+
+input[type='radio']:checked + label .toggle-target{
+  display: flex;
 }
 
 .placeholder\:text-brand-dark\/50::-moz-placeholder{
@@ -1174,10 +1213,6 @@ section{
     padding-left: 1rem;
   }
 
-  .xs\:pt-7{
-    padding-top: 1.75rem;
-  }
-
   .xs\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1263,6 +1298,10 @@ section{
     display: grid;
   }
 
+  .md\:h-12{
+    height: 3rem;
+  }
+
   .md\:px-10{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -1272,9 +1311,23 @@ section{
     padding-top: 2.5rem;
   }
 
+  .md\:pt-12{
+    padding-top: 3rem;
+  }
+
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1350,6 +1403,10 @@ section{
     border-radius: 2rem;
   }
 
+  .lg\:rounded-3xl{
+    border-radius: 1.5rem;
+  }
+
   .lg\:border-y{
     border-top-width: 1px;
     border-bottom-width: 1px;
@@ -1391,6 +1448,10 @@ section{
     padding-top: 3rem;
   }
 
+  .lg\:text-32{
+    font-size: 2rem;
+  }
+
   .lg\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1430,8 +1491,8 @@ section{
     padding-right: 3.5rem;
   }
 
-  .xl\:text-32{
-    font-size: 2rem;
+  .xl\:pr-16{
+    padding-right: 4rem;
   }
 
   .xl\:text-40{

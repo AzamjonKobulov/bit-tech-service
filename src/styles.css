@@ -45,3 +45,15 @@
 .scroll-none::-webkit-scrollbar {
   @apply w-0 h-0;
 }
+
+.option input[type='radio']:checked + label {
+  @apply bg-brand-gray-200;
+}
+
+input[type='radio']:checked + label .toggle-target {
+  @apply flex;
+}
+
+.tab-button.active {
+  @apply bg-brand-dark text-white;
+}
