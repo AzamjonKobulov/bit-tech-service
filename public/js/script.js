@@ -45,8 +45,11 @@ var swiper = new Swiper('.swiper-services', {
 // Function to update custom pagination
 function updateCustomPagination(swiper) {
   const totalSlides = swiper.slides.length;
-  const visibleSlides = Math.floor(swiper.params.slidesPerView || 1);
-  const currentPage = swiper.realIndex + visibleSlides;
+  const visibleSlides = swiper.params.slidesPerView || 1; // Default to 1 if not defined
+  let currentPage = swiper.realIndex + visibleSlides;
+
+  // Ensure currentPage doesn't exceed totalSlides
+  currentPage = Math.min(currentPage, totalSlides);
 
   document
     .querySelectorAll('.swiper-pagination-custom')
@@ -203,4 +206,38 @@ document.getElementById('scroll-tabs-right').addEventListener('click', () => {
     left: 100,
     behavior: 'smooth',
   });
+});
+
+// Swiper Why Choose Us
+var swiper = new Swiper('.swiper-why-choose-use', {
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+  navigation: {
+    nextEl: '.swiper-services-next',
+    prevEl: '.swiper-services-prev',
+  },
+  on: {
+    init: function () {
+      updateCustomPagination(this);
+    },
+    slideChange: function () {
+      updateCustomPagination(this);
+    },
+  },
+  breakpoints: {
+    0: {
+      spaceBetween: 20,
+      slidesPerView: 1,
+    },
+    480: {
+      spaceBetween: 20,
+      slidesPerView: 1.2,
+    },
+    1024: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+    },
+  },
 });

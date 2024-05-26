@@ -24,6 +24,8 @@ module.exports = {
         brand: {
           dark: '#1D1D1D',
           blue: '#0060FE',
+          pink: '#FFE6EB',
+          red: '#FE0032',
           gray: {
             100: '#F7F7FA',
             200: '#F6F7FC',
@@ -46,6 +48,7 @@ module.exports = {
       },
       backgroundImage: {
         'base-gradient': 'linear-gradient(180deg, #F7F7FA 0%, #F4F7FD 100%);',
+        'swiper-gradient': 'linear-gradient(180deg, #F7F7FA 0%, #F4F7FD 100%);',
         'pink-gradient':
           'linear-gradient(180deg, #FFE6EB 0%, #FFDBE2 100%);        ',
         'blue-gradient':
