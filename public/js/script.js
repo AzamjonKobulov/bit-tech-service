@@ -249,38 +249,60 @@ document.addEventListener('DOMContentLoaded', () => {
     '.useful-case-item .image-wrapper'
   );
 
-  // Initial state: First case is active
-  cases.forEach((item, i) => {
-    if (i === 0) {
-      item.classList.add('flex-1');
-      casesTexts[i].classList.remove('hidden');
-      imageWrappers[i].classList.remove('col-span-5');
-      imageWrappers[i].classList.add('col-span-2');
-      imageWrappers[i].classList.add('h-60');
-    } else {
-      item.classList.remove('flex-1');
-      casesTexts[i].classList.add('hidden');
-      imageWrappers[i].classList.add('col-span-5');
-      imageWrappers[i].classList.remove('col-span-2');
-      imageWrappers[i].classList.remove('h-60');
-    }
-  });
-
-  // Event listeners for case items
-  cases.forEach((caseItem, index) => {
-    caseItem.addEventListener('click', () => {
-      cases.forEach((item, i) => {
+  function setInitialState() {
+    cases.forEach((item, i) => {
+      if (i === 0) {
+        item.classList.add('flex-1');
+        casesTexts[i].classList.remove('hidden');
+        imageWrappers[i].classList.remove('col-span-5');
+        imageWrappers[i].classList.add('col-span-2');
+        imageWrappers[i].classList.add('h-60');
+      } else {
         item.classList.remove('flex-1');
         casesTexts[i].classList.add('hidden');
         imageWrappers[i].classList.add('col-span-5');
         imageWrappers[i].classList.remove('col-span-2');
         imageWrappers[i].classList.remove('h-60');
-      });
+      }
+    });
+  }
+
+  function handleCaseClick(caseItem, index) {
+    if (window.innerWidth <= 1024) {
+      // Toggle behavior for mobile: allow all to be opened
+      caseItem.classList.toggle('flex-1');
+      casesTexts[index].classList.toggle('hidden');
+      imageWrappers[index].classList.toggle('col-span-5');
+      imageWrappers[index].classList.toggle('col-span-2');
+      imageWrappers[index].classList.toggle('h-60');
+    } else {
+      // Ensure only one is active for desktop
+      closeAllCases();
       caseItem.classList.add('flex-1');
       casesTexts[index].classList.remove('hidden');
       imageWrappers[index].classList.remove('col-span-5');
       imageWrappers[index].classList.add('col-span-2');
       imageWrappers[index].classList.add('h-60');
+    }
+  }
+
+  function closeAllCases() {
+    cases.forEach((item, i) => {
+      item.classList.remove('flex-1');
+      casesTexts[i].classList.add('hidden');
+      imageWrappers[i].classList.add('col-span-5');
+      imageWrappers[i].classList.remove('col-span-2');
+      imageWrappers[i].classList.remove('h-60');
     });
+  }
+
+  setInitialState();
+
+  // Event listeners for case items
+  cases.forEach((caseItem, index) => {
+    caseItem.addEventListener('click', () => handleCaseClick(caseItem, index));
   });
+
+  // Reapply initial state on window resize
+  window.addEventListener('resize', setInitialState);
 });
