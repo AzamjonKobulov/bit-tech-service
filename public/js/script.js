@@ -54,7 +54,7 @@ function updateCustomPagination(swiper) {
   document
     .querySelectorAll('.swiper-pagination-custom')
     .forEach((pagination) => {
-      pagination.textContent = `${currentPage} / ${totalSlides}`;
+      pagination.textContent = `${Math.floor(currentPage)} / ${totalSlides}`;
     });
 }
 
@@ -209,14 +209,14 @@ document.getElementById('scroll-tabs-right').addEventListener('click', () => {
 });
 
 // Swiper Why Choose Us
-var swiper = new Swiper('.swiper-why-choose-use', {
+var swiper = new Swiper('.swiper-why-choose-us', {
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
   },
   navigation: {
-    nextEl: '.swiper-services-next',
-    prevEl: '.swiper-services-prev',
+    nextEl: '.swiper-choose-next',
+    prevEl: '.swiper-choose-prev',
   },
   on: {
     init: function () {
@@ -256,13 +256,13 @@ document.addEventListener('DOMContentLoaded', () => {
         casesTexts[i].classList.remove('hidden');
         imageWrappers[i].classList.remove('col-span-5');
         imageWrappers[i].classList.add('col-span-2');
-        imageWrappers[i].classList.add('h-60');
+        imageWrappers[i].classList.add('h-80');
       } else {
         item.classList.remove('flex-1');
         casesTexts[i].classList.add('hidden');
         imageWrappers[i].classList.add('col-span-5');
         imageWrappers[i].classList.remove('col-span-2');
-        imageWrappers[i].classList.remove('h-60');
+        imageWrappers[i].classList.remove('h-80');
       }
     });
   }
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
       casesTexts[index].classList.toggle('hidden');
       imageWrappers[index].classList.toggle('col-span-5');
       imageWrappers[index].classList.toggle('col-span-2');
-      imageWrappers[index].classList.toggle('h-60');
+      imageWrappers[index].classList.toggle('h-80');
     } else {
       // Ensure only one is active for desktop
       closeAllCases();
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
       casesTexts[index].classList.remove('hidden');
       imageWrappers[index].classList.remove('col-span-5');
       imageWrappers[index].classList.add('col-span-2');
-      imageWrappers[index].classList.add('h-60');
+      imageWrappers[index].classList.add('h-80');
     }
   }
 
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
       casesTexts[i].classList.add('hidden');
       imageWrappers[i].classList.add('col-span-5');
       imageWrappers[i].classList.remove('col-span-2');
-      imageWrappers[i].classList.remove('h-60');
+      imageWrappers[i].classList.remove('h-80');
     });
   }
 
@@ -305,4 +305,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Reapply initial state on window resize
   window.addEventListener('resize', setInitialState);
+});
+
+// Swiper Revies
+var swiper = new Swiper('.swiper-reviews', {
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+  navigation: {
+    nextEl: '.swiper-reviews-next',
+    prevEl: '.swiper-reviews-prev',
+  },
+  on: {
+    init: function () {
+      updateCustomPagination(this);
+    },
+    slideChange: function () {
+      updateCustomPagination(this);
+    },
+  },
+  breakpoints: {
+    0: {
+      spaceBetween: 12,
+      slidesPerView: 1.2,
+    },
+    768: {
+      spaceBetween: 16,
+      slidesPerView: 1.5,
+    },
+    1024: {
+      spaceBetween: 20,
+      slidesPerView: 2.2,
+    },
+    1280: {
+      spaceBetween: 20,
+      slidesPerView: 2.5,
+    },
+  },
 });

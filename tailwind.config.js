@@ -40,6 +40,7 @@ module.exports = {
       fontSize: {
         32: '2rem',
         40: '2.5rem',
+        200: '12.5rem',
       },
       lineHeight: {
         18: '1.125rem',
