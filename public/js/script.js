@@ -1,3 +1,24 @@
+// Navbar Function
+const bottomNav = document.querySelector('.bottom-nav');
+const topNav = document.querySelector('.top-nav');
+
+document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      bottomNav.classList.add('-translate-y-[300%]');
+      bottomNav.classList.remove('translate-y-0');
+      topNav.classList.add('h-[4.25rem]', 'shadow');
+    } else {
+      bottomNav.classList.remove('-translate-y-[300%]');
+      bottomNav.classList.add('translate-y-0');
+      topNav.classList.remove('h-[4.25rem]', 'shadow');
+    }
+  });
+});
+
+// Swipers
+
+// Swiper Services Section
 var swiper = new Swiper('.swiper-services', {
   slidesPerView: 5,
   // slidesPerGroup: 5,
@@ -42,6 +63,40 @@ var swiper = new Swiper('.swiper-services', {
   },
 });
 
+// Swiper Why Choose Us
+var swiper = new Swiper('.swiper-why-choose-us', {
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+  navigation: {
+    nextEl: '.swiper-choose-next',
+    prevEl: '.swiper-choose-prev',
+  },
+  on: {
+    init: function () {
+      updateCustomPagination(this);
+    },
+    slideChange: function () {
+      updateCustomPagination(this);
+    },
+  },
+  breakpoints: {
+    0: {
+      spaceBetween: 20,
+      slidesPerView: 1,
+    },
+    480: {
+      spaceBetween: 20,
+      slidesPerView: 1.2,
+    },
+    1024: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+    },
+  },
+});
+
 // Function to update custom pagination
 function updateCustomPagination(swiper) {
   const totalSlides = swiper.slides.length;
@@ -58,6 +113,110 @@ function updateCustomPagination(swiper) {
     });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const cases = document.querySelectorAll('.useful-case-item');
+  const casesTexts = document.querySelectorAll('.useful-case-texts');
+  const imageWrappers = document.querySelectorAll(
+    '.useful-case-item .image-wrapper'
+  );
+
+  function setInitialState() {
+    cases.forEach((item, i) => {
+      if (i === 0) {
+        item.classList.add('flex-1');
+        casesTexts[i].classList.remove('hidden');
+        imageWrappers[i].classList.remove('col-span-5');
+        imageWrappers[i].classList.add('col-span-2');
+        imageWrappers[i].classList.add('h-80');
+      } else {
+        item.classList.remove('flex-1');
+        casesTexts[i].classList.add('hidden');
+        imageWrappers[i].classList.add('col-span-5');
+        imageWrappers[i].classList.remove('col-span-2');
+        imageWrappers[i].classList.remove('h-80');
+      }
+    });
+  }
+
+  function handleCaseClick(caseItem, index) {
+    if (window.innerWidth <= 1024) {
+      // Toggle behavior for mobile: allow all to be opened
+      caseItem.classList.toggle('flex-1');
+      casesTexts[index].classList.toggle('hidden');
+      imageWrappers[index].classList.toggle('col-span-5');
+      imageWrappers[index].classList.toggle('col-span-2');
+      imageWrappers[index].classList.toggle('h-80');
+    } else {
+      // Ensure only one is active for desktop
+      closeAllCases();
+      caseItem.classList.add('flex-1');
+      casesTexts[index].classList.remove('hidden');
+      imageWrappers[index].classList.remove('col-span-5');
+      imageWrappers[index].classList.add('col-span-2');
+      imageWrappers[index].classList.add('h-80');
+    }
+  }
+
+  function closeAllCases() {
+    cases.forEach((item, i) => {
+      item.classList.remove('flex-1');
+      casesTexts[i].classList.add('hidden');
+      imageWrappers[i].classList.add('col-span-5');
+      imageWrappers[i].classList.remove('col-span-2');
+      imageWrappers[i].classList.remove('h-80');
+    });
+  }
+
+  setInitialState();
+
+  // Event listeners for case items
+  cases.forEach((caseItem, index) => {
+    caseItem.addEventListener('click', () => handleCaseClick(caseItem, index));
+  });
+
+  // Reapply initial state on window resize
+  window.addEventListener('resize', setInitialState);
+});
+
+// Swiper Revies
+var swiper = new Swiper('.swiper-reviews', {
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+  navigation: {
+    nextEl: '.swiper-reviews-next',
+    prevEl: '.swiper-reviews-prev',
+  },
+  on: {
+    init: function () {
+      updateCustomPagination(this);
+    },
+    slideChange: function () {
+      updateCustomPagination(this);
+    },
+  },
+  breakpoints: {
+    0: {
+      spaceBetween: 12,
+      slidesPerView: 1.2,
+    },
+    768: {
+      spaceBetween: 16,
+      slidesPerView: 1.5,
+    },
+    1024: {
+      spaceBetween: 20,
+      slidesPerView: 2.2,
+    },
+    1280: {
+      spaceBetween: 20,
+      slidesPerView: 2.5,
+    },
+  },
+});
+
+// Tabs of Prices section
 const tabsData = [
   [
     {
@@ -206,141 +365,4 @@ document.getElementById('scroll-tabs-right').addEventListener('click', () => {
     left: 100,
     behavior: 'smooth',
   });
-});
-
-// Swiper Why Choose Us
-var swiper = new Swiper('.swiper-why-choose-us', {
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '.swiper-choose-next',
-    prevEl: '.swiper-choose-prev',
-  },
-  on: {
-    init: function () {
-      updateCustomPagination(this);
-    },
-    slideChange: function () {
-      updateCustomPagination(this);
-    },
-  },
-  breakpoints: {
-    0: {
-      spaceBetween: 20,
-      slidesPerView: 1,
-    },
-    480: {
-      spaceBetween: 20,
-      slidesPerView: 1.2,
-    },
-    1024: {
-      spaceBetween: 20,
-      slidesPerView: 2,
-    },
-  },
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const cases = document.querySelectorAll('.useful-case-item');
-  const casesTexts = document.querySelectorAll('.useful-case-texts');
-  const imageWrappers = document.querySelectorAll(
-    '.useful-case-item .image-wrapper'
-  );
-
-  function setInitialState() {
-    cases.forEach((item, i) => {
-      if (i === 0) {
-        item.classList.add('flex-1');
-        casesTexts[i].classList.remove('hidden');
-        imageWrappers[i].classList.remove('col-span-5');
-        imageWrappers[i].classList.add('col-span-2');
-        imageWrappers[i].classList.add('h-80');
-      } else {
-        item.classList.remove('flex-1');
-        casesTexts[i].classList.add('hidden');
-        imageWrappers[i].classList.add('col-span-5');
-        imageWrappers[i].classList.remove('col-span-2');
-        imageWrappers[i].classList.remove('h-80');
-      }
-    });
-  }
-
-  function handleCaseClick(caseItem, index) {
-    if (window.innerWidth <= 1024) {
-      // Toggle behavior for mobile: allow all to be opened
-      caseItem.classList.toggle('flex-1');
-      casesTexts[index].classList.toggle('hidden');
-      imageWrappers[index].classList.toggle('col-span-5');
-      imageWrappers[index].classList.toggle('col-span-2');
-      imageWrappers[index].classList.toggle('h-80');
-    } else {
-      // Ensure only one is active for desktop
-      closeAllCases();
-      caseItem.classList.add('flex-1');
-      casesTexts[index].classList.remove('hidden');
-      imageWrappers[index].classList.remove('col-span-5');
-      imageWrappers[index].classList.add('col-span-2');
-      imageWrappers[index].classList.add('h-80');
-    }
-  }
-
-  function closeAllCases() {
-    cases.forEach((item, i) => {
-      item.classList.remove('flex-1');
-      casesTexts[i].classList.add('hidden');
-      imageWrappers[i].classList.add('col-span-5');
-      imageWrappers[i].classList.remove('col-span-2');
-      imageWrappers[i].classList.remove('h-80');
-    });
-  }
-
-  setInitialState();
-
-  // Event listeners for case items
-  cases.forEach((caseItem, index) => {
-    caseItem.addEventListener('click', () => handleCaseClick(caseItem, index));
-  });
-
-  // Reapply initial state on window resize
-  window.addEventListener('resize', setInitialState);
-});
-
-// Swiper Revies
-var swiper = new Swiper('.swiper-reviews', {
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '.swiper-reviews-next',
-    prevEl: '.swiper-reviews-prev',
-  },
-  on: {
-    init: function () {
-      updateCustomPagination(this);
-    },
-    slideChange: function () {
-      updateCustomPagination(this);
-    },
-  },
-  breakpoints: {
-    0: {
-      spaceBetween: 12,
-      slidesPerView: 1.2,
-    },
-    768: {
-      spaceBetween: 16,
-      slidesPerView: 1.5,
-    },
-    1024: {
-      spaceBetween: 20,
-      slidesPerView: 2.2,
-    },
-    1280: {
-      spaceBetween: 20,
-      slidesPerView: 2.5,
-    },
-  },
 });
