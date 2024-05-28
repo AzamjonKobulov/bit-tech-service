@@ -198,7 +198,7 @@
               Вызвать мастера
             </button>
             <!-- Mobile Menu Button -->
-            <button class="lg:hidden px-3.5">
+            <button id="mobileMenuBtn" class="lg:hidden px-3.5">
               <img
                 src="./assets/images/icon-burger.svg"
                 alt="Mobile Menu Icon"
@@ -226,6 +226,72 @@
           />
         </svg>
       </button>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="fixed inset-0 z-[70] w-full h-full bg-blue-gradient text-white translate-x-full transition-all duration-300"
+      >
+        <div class="h-16 flex items-center justify-between bg-white py-3 px-4">
+          <!-- Logo -->
+          <a href="#" class="w-fit grid place-content-center">
+            <img
+              src="./assets/images/logo.svg"
+              alt="Logo"
+              class="w-12 h-7 sm:w-auto sm:h-auto"
+            />
+          </a>
+          <button id="mobileMenuBtn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 stroke-brand-dark"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="w-full h-full relative grid place-content-center">
+          <ul class="font-medium text-xl text-center space-y-5 -mt-20">
+            <li>
+              <a href="#services" class="nav-link">Статус ремонта</a>
+            </li>
+            <li>
+              <a href="#prices" class="nav-link">Цены</a>
+            </li>
+            <li>
+              <a href="#brands" class="nav-link">Бренды</a>
+            </li>
+            <li>
+              <a href="#history-drivers" class="nav-link">Истории</a>
+            </li>
+            <li>
+              <a href="#prices" class="nav-link">Заявка на деталь</a>
+            </li>
+            <li>
+              <a href="#why-choose-us" class="nav-link">О компании</a>
+            </li>
+            <li>
+              <a href="#contacts" class="nav-link">Контакты</a>
+            </li>
+
+            <li class="space-y-5 flex flex-col text-xl pt-10">
+              <p>ул. Пушкинская, 136 А</p>
+              <p>
+                пн-пт с 10:00 до 19:00 <br />
+                сб — 10:00 до 18:00
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <!-- MAIN -->

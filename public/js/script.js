@@ -5,15 +5,32 @@ const topNav = document.querySelector('.top-nav');
 document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
-      bottomNav.classList.add('-translate-y-[300%]');
+      bottomNav.classList.add('lg:-translate-y-[300%]');
       bottomNav.classList.remove('translate-y-0');
-      topNav.classList.add('h-[4.25rem]', 'shadow');
+      topNav.classList.add('lg:h-[4.25rem]', 'shadow');
     } else {
-      bottomNav.classList.remove('-translate-y-[300%]');
+      bottomNav.classList.remove('lg:-translate-y-[300%]');
       bottomNav.classList.add('translate-y-0');
-      topNav.classList.remove('h-[4.25rem]', 'shadow');
+      topNav.classList.remove('lg:h-[4.25rem]', 'shadow');
     }
   });
+});
+
+// Mobile Menu
+const mobileMenuBtns = document.querySelectorAll('#mobileMenuBtn');
+const mobileMenu = document.querySelector('#mobileMenu');
+
+const toggleMobileMenu = () => {
+  mobileMenu.classList.toggle('translate-x-full');
+  document.body.classList.toggle('overflow-hidden');
+};
+
+mobileMenuBtns.forEach((btn) => {
+  btn.addEventListener('click', toggleMobileMenu);
+});
+
+document.querySelectorAll('#mobileMenu ul a').forEach((link) => {
+  link.addEventListener('click', toggleMobileMenu);
 });
 
 // Swipers
@@ -212,6 +229,10 @@ var swiper = new Swiper('.swiper-reviews', {
     1280: {
       spaceBetween: 20,
       slidesPerView: 2.5,
+    },
+    1920: {
+      spaceBetween: 20,
+      slidesPerView: 3,
     },
   },
 });
