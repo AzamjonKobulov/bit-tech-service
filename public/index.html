@@ -92,10 +92,10 @@
         </div>
         <!-- Bottom Nav -->
         <div
-          class="bottom-nav text-sm xl:text-base bg-white border-y border-brand-gray-300 transition-all duration-500"
+          class="bottom-nav text-sm xl:text-base bg-white border-b lg:border-y border-brand-gray-300 transition-all duration-500"
         >
           <div
-            class="bottom-nav-child h-14 sm:h-16 xl:h-[4.5rem] max-w-base mx-auto flex divide-x divide-brand-gray-300"
+            class="bottom-nav-child h-14 sm:h-16 xl:h-[4.5rem] max-w-base mx-auto flex justify-between lg:justify-start lg:divide-x divide-brand-gray-300"
           >
             <!-- Logo -->
             <a href="#" class="w-fit grid place-content-center px-4 xs:px-5">
@@ -106,7 +106,7 @@
               />
             </a>
             <!-- Services -->
-            <div class="hidden md:grid place-content-center px-5">
+            <div class="hidden lg:grid place-content-center px-5">
               <button
                 class="h-9 flex items-center gap-2 bg-brand-blue font-medium text-white text-[0.8125rem] rounded-full hover:bg-brand-dark transition-all duration-200 pl-4 pr-3"
               >
@@ -126,7 +126,9 @@
               </button>
             </div>
             <!-- Search -->
-            <div class="flex-1 flex items-center px-4 xs:px-5 sm:px-6">
+            <div
+              class="flex-1 hidden lg:flex items-center px-4 xs:px-5 sm:px-6"
+            >
               <label for="search" class="cursor-pointer">
                 <svg
                   width="24"
@@ -175,7 +177,7 @@
               </a>
             </div>
             <!-- Message -->
-            <button class="group hidden xs:grid place-content-center p-7">
+            <button class="group hidden lg:grid place-content-center p-7">
               <svg
                 width="16"
                 height="16"
@@ -202,7 +204,7 @@
               <img
                 src="./assets/images/icon-burger.svg"
                 alt="Mobile Menu Icon"
-                class="w-8 h-8"
+                class="w-6 h-6"
               />
             </button>
           </div>
@@ -232,7 +234,7 @@
         id="mobileMenu"
         class="fixed inset-0 z-[70] w-full h-full bg-blue-gradient text-white translate-x-full transition-all duration-300"
       >
-        <div class="h-16 flex items-center justify-between bg-white py-3 px-4">
+        <div class="h-14 flex items-center justify-between bg-white py-3 px-4">
           <!-- Logo -->
           <a href="#" class="w-fit grid place-content-center">
             <img

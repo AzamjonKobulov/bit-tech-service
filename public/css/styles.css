@@ -1089,6 +1089,9 @@ section{
   border-top-width: 1px;
   border-bottom-width: 1px;
 }
+.border-b{
+  border-bottom-width: 1px;
+}
 .border-brand-dark{
   --tw-border-opacity: 1;
   border-color: rgb(29 29 29 / var(--tw-border-opacity));
@@ -1895,6 +1898,10 @@ input[type='radio']:checked + label .toggle-target{
 
   .lg\:flex-row{
     flex-direction: row;
+  }
+
+  .lg\:justify-start{
+    justify-content: flex-start;
   }
 
   .lg\:gap-10{
