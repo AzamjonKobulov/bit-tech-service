@@ -56,6 +56,9 @@ module.exports = {
           'linear-gradient(0deg, #0060FE, #0060FE), linear-gradient(180deg, #0060FE 0%, rgba(0, 96, 254, 0.8) 100%), linear-gradient(180deg, #0060FE 0%, #317FFE 100%);',
         brands: "url('../assets/images/bg-brands.png')",
       },
+      boxShadow: {
+        modal: '0px 4px 30px 0px #120D1D0F; 0px 0px 8px 0px #120D1D0A;',
+      },
     },
   },
   plugins: [],

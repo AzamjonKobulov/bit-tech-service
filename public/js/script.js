@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
       bottomNav.classList.add('lg:-translate-y-[300%]');
       bottomNav.classList.remove('translate-y-0');
       topNav.classList.add('lg:h-[4.25rem]', 'shadow');
+      servicesModal.classList.add('hidden');
+      messageModal.classList.add('hidden');
     } else {
       bottomNav.classList.remove('lg:-translate-y-[300%]');
       bottomNav.classList.add('translate-y-0');
@@ -31,6 +33,101 @@ mobileMenuBtns.forEach((btn) => {
 
 document.querySelectorAll('#mobileMenu ul a').forEach((link) => {
   link.addEventListener('click', toggleMobileMenu);
+});
+
+// Modals
+const servicesBtn = document.querySelector('#servicesButton');
+const servicesModal = document.querySelector('#servicesModal');
+const messageBtn = document.querySelector('#messageButton');
+const messageModal = document.querySelector('#messageModal');
+
+// Function to handle click outside the modal
+function handleOutsideClickServices(event, modal) {
+  if (!modal.contains(event.target) && !servicesBtn.contains(event.target)) {
+    modal.classList.add('hidden');
+    modal.classList.remove('fade-in');
+    document.removeEventListener('click', handleOutsideClickServices);
+  }
+}
+
+// Services Modal Funcitons
+servicesBtn.addEventListener('click', () => {
+  const isHidden = servicesModal.classList.contains('hidden');
+
+  if (isHidden) {
+    servicesModal.classList.remove('hidden');
+
+    // Add smooth transition effect
+    setTimeout(() => {
+      servicesModal.classList.add('fade-in');
+    }, 10);
+
+    // Add click event listener for outside clicks
+    document.addEventListener('click', (event) =>
+      handleOutsideClickServices(event, servicesModal)
+    );
+  } else {
+    servicesModal.classList.remove('fade-in');
+    setTimeout(() => {
+      servicesModal.classList.add('hidden');
+    }, 300); // Match this duration to the CSS transition duration
+  }
+
+  // Add click event listeners for buttons inside the modal
+  document.querySelectorAll('#servicesModal button').forEach((button) => {
+    button.addEventListener('click', () => {
+      servicesModal.classList.remove('fade-in');
+      setTimeout(() => {
+        servicesModal.classList.add('hidden');
+      }, 300); // Match this duration to the CSS transition duration
+      document.removeEventListener('click', handleOutsideClick);
+    });
+  });
+});
+
+// Message Modal Funcitons
+
+// Function to handle click outside the modal
+function handleOutsideClickMessage(event, modal) {
+  if (!modal.contains(event.target) && !messageBtn.contains(event.target)) {
+    modal.classList.add('hidden');
+    modal.classList.remove('fade-in');
+    document.removeEventListener('click', handleOutsideClickMessage);
+  }
+}
+
+messageBtn.addEventListener('click', () => {
+  const isHidden = messageModal.classList.contains('hidden');
+
+  if (isHidden) {
+    messageModal.classList.remove('hidden');
+
+    // Add smooth transition effect
+    setTimeout(() => {
+      messageModal.classList.add('fade-in');
+    }, 10);
+
+    // Add click event listener for outside clicks
+    document.addEventListener('click', (event) =>
+      handleOutsideClickMessage(event, messageModal)
+    );
+  } else {
+    messageModal.classList.remove('fade-in');
+    setTimeout(() => {
+      messageModal.classList.add('hidden');
+    }, 10); // Match this duration to the CSS transition duration
+  }
+
+  // Add click event listeners for buttons inside the modal
+  document.querySelectorAll('#messageModal button').forEach((button) => {
+    button.addEventListener('click', () => {
+      messageModal.classList.remove('fade-in');
+      setTimeout(() => {
+        messageModal.classList.add('hidden');
+      }, 300); // Match this duration to the CSS transition duration
+      document.removeEventListener('click', handleOutsideClick);
+    });
+  });
 });
 
 // Swipers

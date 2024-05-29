@@ -89,3 +89,13 @@ input[type='radio']:checked + label .toggle-target {
     transition: height 0.5s ease; /* Transition for height property */
   }
 }
+
+/* Smooth transition for modal */
+#servicesModal {
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+#servicesModal.fade-in {
+  opacity: 1;
+}
