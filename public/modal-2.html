@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="fixed inset-0 z-[70] flex items-center justify-center bg-brand-dark/70 overflow-auto lg:pt-48 xl:pt-10 2xl:pt-0 pb-10 px-5"
+    >
+      <div
+        class="max-w-[50rem] w-full relative bg-white rounded-3xl lg:rounded-32 overflow-hidden"
+      >
+        <!-- Close Button -->
+        <button class="absolute top-5 right-5 sm:top-7 sm:right-7">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-3.5 h-3.5 sm:w-auto sm:h-auto"
+          >
+            <path
+              d="M9.00006 10.8667L2.46673 17.4C2.22229 17.6444 1.91118 17.7667 1.5334 17.7667C1.15562 17.7667 0.844509 17.6444 0.600065 17.4C0.35562 17.1556 0.233398 16.8444 0.233398 16.4667C0.233398 16.0889 0.35562 15.7778 0.600065 15.5333L7.1334 9L0.600065 2.46667C0.35562 2.22223 0.233398 1.91112 0.233398 1.53334C0.233398 1.15556 0.35562 0.844448 0.600065 0.600004C0.844509 0.355559 1.15562 0.233337 1.5334 0.233337C1.91118 0.233337 2.22229 0.355559 2.46673 0.600004L9.00006 7.13334L15.5334 0.600004C15.7778 0.355559 16.089 0.233337 16.4667 0.233337C16.8445 0.233337 17.1556 0.355559 17.4001 0.600004C17.6445 0.844448 17.7667 1.15556 17.7667 1.53334C17.7667 1.91112 17.6445 2.22223 17.4001 2.46667L10.8667 9L17.4001 15.5333C17.6445 15.7778 17.7667 16.0889 17.7667 16.4667C17.7667 16.8444 17.6445 17.1556 17.4001 17.4C17.1556 17.6444 16.8445 17.7667 16.4667 17.7667C16.089 17.7667 15.7778 17.6444 15.5334 17.4L9.00006 10.8667Z"
+              fill="#1D1D1D"
+              fill-opacity="0.8"
+            />
+          </svg>
+        </button>
+        <!-- Top -->
+        <div class="space-y-3.5 sm:space-y-6 text-center pt-10 pb-12">
+          <h3>Заявка на выездной ремонт</h3>
+          <p class="max-w-80 mx-auto text-brand-dark/50 leading-5">
+            Введите ваши данные, <br />
+            мы перезвоним вам в ближайшее время.
+          </p>
+        </div>
+        <!-- Form -->
+        <form
+          action="#"
+          class="sm:text-xl font-medium text-brand-dark/50 border-y border-brand-gray-300 divide-y divide-brand-gray-300"
+        >
+          <!-- Name -->
+          <label
+            for="name"
+            class="group grid grid-cols-3 sm:grid-cols-2 divide-x divide-brand-gray-300"
+          >
+            <p class="text-base sm:text-xl p-5 sm:py-8 sm:pl-10 sm:pr-8">Имя</p>
+            <input
+              type="text"
+              class="outline-none col-span-2 sm:col-span-1 text-brand-dark placeholder:sm:text-xl p-5 sm:py-8 sm:pl-10 sm:pr-8"
+              id="name"
+            />
+          </label>
+          <!-- Number -->
+          <label
+            for="number"
+            class="group grid grid-cols-3 sm:grid-cols-2 divide-x divide-brand-gray-300"
+          >
+            <p class="text-base sm:text-xl p-5 sm:py-8 sm:pl-10 sm:pr-8">+7</p>
+            <input
+              type="text"
+              class="outline-none col-span-2 sm:col-span-1 text-brand-dark placeholder:sm:text-xl p-5 sm:py-8 sm:pl-10 sm:pr-8"
+              id="number"
+            />
+          </label>
+          <!-- Number -->
+          <label
+            for="address"
+            class="group grid grid-cols-3 sm:grid-cols-2 divide-x divide-brand-gray-300"
+          >
+            <p class="text-base sm:text-xl p-5 sm:py-8 sm:pl-10 sm:pr-8">
+              Адрес
+            </p>
+            <input
+              type="text"
+              class="outline-none col-span-2 sm:col-span-1 text-brand-dark placeholder:sm:text-xl p-5 sm:py-8 sm:pl-10 sm:pr-8"
+              id="address"
+            />
+          </label>
+        </form>
+        <!-- Bottom -->
+        <div class="border-y border-brand-gray-300">
+          <div class="max-w-base mx-auto flex flex-col xs:flex-row">
+            <div class="flex-1 flex items-center p-3.5 sm:p-5 lg:px-10 lg:py-8">
+              <p class="xs:text-xs sm:text-base text-brand-dark/40">
+                Оставляя свои данные, вы соглашаетесь с <br />
+                <a href="#" class="text-brand-blue"
+                  >политикой конфиденциальности</a
+                >
+              </p>
+            </div>
+            <!-- Send -->
+            <div class="flex items-center justify-center p-3.5 sm:p-5">
+              <button
+                class="h-10 md:h-12 flex items-center gap-2 bg-brand-blue font-medium text-white text-sm sm:text-base rounded-full hover:bg-brand-dark transition-all duration-200 px-5"
+                id="servicesButton"
+              >
+                Отправить
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="-rotate-90"
+                >
+                  <path
+                    d="M5.41336 6.19334L8.00002 8.78L10.5867 6.19334C10.6484 6.13162 10.7217 6.08266 10.8023 6.04925C10.883 6.01585 10.9694 5.99866 11.0567 5.99866C11.144 5.99866 11.2304 6.01585 11.3111 6.04925C11.3917 6.08266 11.465 6.13162 11.5267 6.19334C11.5884 6.25506 11.6374 6.32833 11.6708 6.40898C11.7042 6.48962 11.7214 6.57605 11.7214 6.66334C11.7214 6.75062 11.7042 6.83706 11.6708 6.9177C11.6374 6.99834 11.5884 7.07162 11.5267 7.13334L8.46669 10.1933C8.40502 10.2551 8.33176 10.3042 8.25111 10.3376C8.17046 10.3711 8.084 10.3883 7.99669 10.3883C7.90938 10.3883 7.82292 10.3711 7.74227 10.3376C7.66163 10.3042 7.58837 10.2551 7.52669 10.1933L4.46669 7.13334C4.40489 7.07166 4.35586 6.9984 4.3224 6.91775C4.28895 6.8371 4.27173 6.75065 4.27173 6.66334C4.27173 6.57603 4.28895 6.48957 4.3224 6.40892C4.35586 6.32827 4.40489 6.25501 4.46669 6.19334C4.72669 5.94 5.15336 5.93334 5.41336 6.19334Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
