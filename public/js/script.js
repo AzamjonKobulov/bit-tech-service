@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       topNav.classList.add('lg:h-[4.25rem]', 'shadow');
       servicesModal.classList.add('hidden');
       messageModal.classList.add('hidden');
+      searchHistoryContainer.classList.add('hidden');
     } else {
       bottomNav.classList.remove('lg:-translate-y-[300%]');
       bottomNav.classList.add('translate-y-0');
@@ -482,5 +483,131 @@ document.getElementById('scroll-tabs-right').addEventListener('click', () => {
     top: 0,
     left: 100,
     behavior: 'smooth',
+  });
+});
+
+// Search input Functions
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('search');
+  const searchIconPath = document.getElementById('search-icon-path');
+  const clearButton = searchInput.nextElementSibling;
+  const searchHistoryContainer = document.getElementById('searchHistory'); // Renamed to avoid conflict
+
+  clearButton.classList.add('hidden');
+
+  searchInput.addEventListener('focus', function () {
+    searchIconPath.setAttribute('stroke', '#0060FE');
+    displaySearchHistory(); // Display search history when input is focused
+  });
+
+  searchInput.addEventListener('blur', function () {
+    if (!searchInput.value) {
+      searchIconPath.setAttribute('stroke', '#D1D1D9');
+      searchHistoryContainer.classList.add('hidden'); // Hide search history when input is blurred and empty
+    }
+  });
+
+  searchInput.addEventListener('click', function () {
+    searchInput.value = ''; // Clear input value when it's clicked
+    searchIconPath.setAttribute('stroke', '#0060FE');
+    displaySearchHistory(); // Display search history when input is clicked
+  });
+
+  searchInput.addEventListener('input', function () {
+    if (searchInput.value) {
+      clearButton.classList.remove('hidden');
+    } else {
+      clearButton.classList.add('hidden');
+    }
+  });
+
+  clearButton.addEventListener('click', function () {
+    searchInput.value = '';
+    clearButton.classList.add('hidden');
+    searchIconPath.setAttribute('stroke', '#D1D1D9'); // Reset stroke color
+    searchInput.focus();
+  });
+
+  // Function to display the modal with search history results
+  function displaySearchHistory() {
+    // Retrieve search history from local storage
+    const history = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
+    // Check if search history is not empty
+    if (history.length > 0) {
+      // Clear existing buttons in the modal
+      searchHistoryContainer.innerHTML = '';
+
+      // Create and append buttons for each search history item
+      history.forEach((item) => {
+        const button = document.createElement('button');
+        button.textContent = item;
+        button.classList.add(
+          'block',
+          'hover:text-brand-blue',
+          'transition-all',
+          'duration-300'
+        );
+        searchHistoryContainer.appendChild(button);
+      });
+
+      // Show the modal
+      searchHistoryContainer.classList.remove('hidden');
+    } else {
+      // If search history is empty, hide the modal
+      searchHistoryContainer.classList.add('hidden');
+    }
+  }
+
+  // Function to handle storing search in local storage
+  function storeSearch(searchQuery) {
+    let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
+    // Check if the search query already exists in the history
+    const existingIndex = searchHistory.indexOf(searchQuery);
+    if (existingIndex !== -1) {
+      // Remove existing entry to prevent duplication
+      searchHistory.splice(existingIndex, 1);
+    }
+
+    // Add the new search query to the beginning of the history
+    searchHistory.unshift(searchQuery);
+
+    // Limit search history to, for example, 10 items
+    if (searchHistory.length > 10) {
+      searchHistory = searchHistory.slice(0, 10);
+    }
+
+    // Update local storage
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+  }
+
+  // Event listener for the search input
+  searchInput.addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+      const searchQuery = searchInput.value.trim();
+      if (searchQuery) {
+        // Store the search query in local storage
+        storeSearch(searchQuery);
+        // Clear the input value
+        searchInput.value = '';
+        // Display the last searched word
+        displaySearchHistory();
+        // Do any other necessary action, like initiating search or redirecting
+      }
+    }
+  });
+
+  // Event delegation for dynamically created buttons in the modal
+  searchHistoryContainer.addEventListener('click', function (event) {
+    if (event.target.tagName === 'BUTTON') {
+      // Retrieve the text content of the clicked button (search history item)
+      const searchQuery = event.target.textContent;
+      // Do something with the selected search query, like initiating search or filling the input
+      // For example, you can fill the input with the selected search query:
+      searchInput.value = searchQuery;
+      // Store the search in local storage
+      storeSearch(searchQuery);
+    }
   });
 });

@@ -776,6 +776,15 @@ section{
 .mt-auto{
   margin-top: auto;
 }
+.mr-2{
+  margin-right: 0.5rem;
+}
+.mr-3{
+  margin-right: 0.75rem;
+}
+.mr-3\.5{
+  margin-right: 0.875rem;
+}
 .block{
   display: block;
 }
@@ -1808,8 +1817,16 @@ input[type='radio']:checked + label .toggle-target{
     margin-top: -3rem;
   }
 
+  .md\:flex{
+    display: flex;
+  }
+
   .md\:grid{
     display: grid;
+  }
+
+  .md\:hidden{
+    display: none;
   }
 
   .md\:h-12{
@@ -1826,6 +1843,10 @@ input[type='radio']:checked + label .toggle-target{
 
   .md\:w-1\/2{
     width: 50%;
+  }
+
+  .md\:flex-grow-0{
+    flex-grow: 0;
   }
 
   .md\:flex-row{
