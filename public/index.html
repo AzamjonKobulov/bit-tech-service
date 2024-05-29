@@ -92,10 +92,10 @@
         </div>
         <!-- Bottom Nav -->
         <div
-          class="bottom-nav text-sm xl:text-base bg-white border-b lg:border-y border-brand-gray-300 transition-all duration-500"
+          class="bottom-nav text-sm xl:text-base bg-white border-y border-brand-gray-300 transition-all duration-500"
         >
           <div
-            class="bottom-nav-child h-14 sm:h-16 xl:h-[4.5rem] max-w-base mx-auto flex justify-between lg:justify-start lg:divide-x divide-brand-gray-300"
+            class="bottom-nav-child h-14 sm:h-16 xl:h-[4.5rem] max-w-base mx-auto flex divide-x divide-brand-gray-300"
           >
             <!-- Logo -->
             <a href="#" class="w-fit grid place-content-center px-4 xs:px-5">
@@ -106,9 +106,11 @@
               />
             </a>
             <!-- Services -->
-            <div class="hidden lg:grid place-content-center px-5">
+            <div
+              class="flex-1 sm:flex-grow-0 flex items-center justify-center xs:justify-start md:justify-center px-5"
+            >
               <button
-                class="h-9 flex items-center gap-2 bg-brand-blue font-medium text-white text-[0.8125rem] rounded-full hover:bg-brand-dark transition-all duration-200 pl-4 pr-3"
+                class="h-8 md:h-9 flex items-center gap-2 bg-brand-blue font-medium text-white text-[0.8125rem] rounded-full hover:bg-brand-dark transition-all duration-200 pl-4 pr-3"
               >
                 Ремонтируем
                 <svg
@@ -127,7 +129,7 @@
             </div>
             <!-- Search -->
             <div
-              class="flex-1 hidden lg:flex items-center px-4 xs:px-5 sm:px-6"
+              class="flex-1 hidden sm:flex items-center px-4 xs:px-5 sm:pl-3 sm:pr-0 md:px-6"
             >
               <label for="search" class="cursor-pointer">
                 <svg
@@ -177,7 +179,7 @@
               </a>
             </div>
             <!-- Message -->
-            <button class="group hidden lg:grid place-content-center p-7">
+            <button class="group hidden xs:grid place-content-center p-7">
               <svg
                 width="16"
                 height="16"
@@ -243,6 +245,32 @@
               class="w-12 h-7 sm:w-auto sm:h-auto"
             />
           </a>
+          <!-- Search -->
+          <div class="flex-1 sm:hidden flex items-center px-4 xs:px-5 sm:px-6">
+            <label for="search" class="cursor-pointer">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 21L16.657 16.657M16.657 16.657C17.3998 15.9141 17.9891 15.0322 18.3912 14.0616C18.7932 13.0909 19.0002 12.0506 19.0002 11C19.0002 9.94942 18.7932 8.90911 18.3912 7.93848C17.9891 6.96785 17.3998 6.08591 16.657 5.34302C15.9141 4.60014 15.0321 4.01084 14.0615 3.6088C13.0909 3.20675 12.0506 2.99982 11 2.99982C9.94936 2.99982 8.90905 3.20675 7.93842 3.6088C6.96779 4.01084 6.08585 4.60014 5.34296 5.34302C3.84263 6.84335 2.99976 8.87824 2.99976 11C2.99976 13.1218 3.84263 15.1567 5.34296 16.657C6.84329 18.1574 8.87818 19.0002 11 19.0002C13.1217 19.0002 15.1566 18.1574 16.657 16.657Z"
+                  stroke="#D1D1D9"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </label>
+            <input
+              type="text"
+              placeholder="Что вы хотите найти?"
+              class="w-full outline-none text-brand-dark placeholder:text-brand-dark/50 pl-2.5 xs:pl-4 py-2"
+              id="search"
+            />
+          </div>
           <button id="mobileMenuBtn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -261,7 +289,7 @@
           </button>
         </div>
         <div class="w-full h-full relative grid place-content-center">
-          <ul class="font-medium text-lg text-center space-y-5 -mt-20">
+          <ul class="font-medium text-lgs text-center space-y-5 -mt-20">
             <li>
               <a href="#services" class="nav-link">Статус ремонта</a>
             </li>
@@ -284,7 +312,7 @@
               <a href="#contacts" class="nav-link">Контакты</a>
             </li>
 
-            <li class="space-y-5 flex flex-col text-xl pt-10">
+            <li class="space-y-5 flex flex-col text-xl pt-5">
               <p>ул. Пушкинская, 136 А</p>
               <p>
                 пн-пт с 10:00 до 19:00 <br />
@@ -292,6 +320,34 @@
               </p>
             </li>
           </ul>
+
+          <!-- Phone -->
+          <div
+            class="group grid lg:hidden place-content-center text-white mt-5 px-7 xl:px-12"
+          >
+            <a href="tel:" class="flex items-center gap-2">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-white"
+              >
+                <path
+                  d="M13.6582 11.4267L10.9482 8.96266C10.8201 8.84623 10.6518 8.78414 10.4787 8.78948C10.3057 8.79483 10.1415 8.86721 10.0209 8.99133L8.42552 10.632C8.04152 10.5587 7.26952 10.318 6.47485 9.52533C5.68019 8.73 5.43952 7.956 5.36819 7.57466L7.00752 5.97866C7.1318 5.85808 7.20428 5.69388 7.20963 5.5208C7.21498 5.34772 7.15278 5.17936 7.03619 5.05133L4.57285 2.342C4.45622 2.21357 4.29411 2.13567 4.12096 2.12484C3.94781 2.11401 3.77725 2.1711 3.64552 2.284L2.19885 3.52466C2.0836 3.64034 2.0148 3.7943 2.00552 3.95733C1.99552 4.124 1.80485 8.072 4.86619 11.1347C7.53685 13.8047 10.8822 14 11.8035 14C11.9382 14 12.0209 13.996 12.0429 13.9947C12.2059 13.9855 12.3597 13.9164 12.4749 13.8007L13.7149 12.3533C13.8282 12.222 13.8857 12.0516 13.8751 11.8785C13.8645 11.7053 13.7867 11.5432 13.6582 11.4267Z"
+                />
+              </svg>
+              (3412) 655-644
+            </a>
+          </div>
+
+          <!-- Call to Master -->
+          <button
+            class="h-10 block bg-white text-brand-dark hover:bg-brand-dark hover:text-white transition-all duration-200 mt-5 px-10 xl:px-14"
+          >
+            Вызвать мастера
+          </button>
         </div>
       </div>
     </header>
