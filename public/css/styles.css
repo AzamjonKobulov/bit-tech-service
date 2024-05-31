@@ -1939,6 +1939,10 @@ input[type='radio']:checked + label .toggle-target{
     justify-content: center;
   }
 
+  .md\:p-7{
+    padding: 1.75rem;
+  }
+
   .md\:px-10{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
