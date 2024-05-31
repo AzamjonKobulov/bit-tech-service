@@ -825,6 +825,9 @@ section{
 .h-6{
   height: 1.5rem;
 }
+.h-64{
+  height: 16rem;
+}
 .h-7{
   height: 1.75rem;
 }
@@ -842,15 +845,6 @@ section{
 }
 .h-px{
   height: 1px;
-}
-.h-48{
-  height: 12rem;
-}
-.h-1\/2{
-  height: 50%;
-}
-.h-64{
-  height: 16rem;
 }
 .w-1{
   width: 0.25rem;
@@ -904,12 +898,6 @@ section{
 .w-full{
   width: 100%;
 }
-.w-\[45\%\]{
-  width: 45%;
-}
-.w-1\/2{
-  width: 50%;
-}
 .min-w-max{
   min-width: -moz-max-content;
   min-width: max-content;
@@ -961,14 +949,6 @@ section{
 }
 .-rotate-6{
   --tw-rotate: -6deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.-rotate-90{
-  --tw-rotate: -90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.-rotate-180{
-  --tw-rotate: -180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform{
@@ -1266,6 +1246,9 @@ section{
 .p-7{
   padding: 1.75rem;
 }
+.p-4{
+  padding: 1rem;
+}
 .px-0{
   padding-left: 0px;
   padding-right: 0px;
@@ -1357,26 +1340,11 @@ section{
 .pt-10{
   padding-top: 2.5rem;
 }
-.pt-14{
-  padding-top: 3.5rem;
-}
 .pt-5{
   padding-top: 1.25rem;
 }
 .pt-8{
   padding-top: 2rem;
-}
-.pt-20{
-  padding-top: 5rem;
-}
-.pt-40{
-  padding-top: 10rem;
-}
-.pt-48{
-  padding-top: 12rem;
-}
-.pt-64{
-  padding-top: 16rem;
 }
 .text-center{
   text-align: center;
@@ -1580,18 +1548,6 @@ input[type='radio']:checked + label .toggle-target{
 .hover\:bg-brand-dark:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(29 29 29 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-brand-dark\/50:hover{
-  background-color: rgb(29 29 29 / 0.5);
-}
-
-.hover\:bg-brand-dark\/20:hover{
-  background-color: rgb(29 29 29 / 0.2);
-}
-
-.hover\:bg-brand-dark\/10:hover{
-  background-color: rgb(29 29 29 / 0.1);
 }
 
 .hover\:bg-brand-dark\/5:hover{
@@ -1800,16 +1756,16 @@ input[type='radio']:checked + label .toggle-target{
     height: 6rem;
   }
 
+  .sm\:h-72{
+    height: 18rem;
+  }
+
   .sm\:h-96{
     height: 24rem;
   }
 
   .sm\:h-auto{
     height: auto;
-  }
-
-  .sm\:h-72{
-    height: 18rem;
   }
 
   .sm\:w-1\/3{
@@ -1856,6 +1812,10 @@ input[type='radio']:checked + label .toggle-target{
 
   .sm\:p-5{
     padding: 1.25rem;
+  }
+
+  .sm\:p-7{
+    padding: 1.75rem;
   }
 
   .sm\:px-0{
@@ -1952,16 +1912,16 @@ input[type='radio']:checked + label .toggle-target{
     height: 3rem;
   }
 
+  .md\:h-80{
+    height: 20rem;
+  }
+
   .md\:h-9{
     height: 2.25rem;
   }
 
   .md\:h-\[23rem\]{
     height: 23rem;
-  }
-
-  .md\:h-80{
-    height: 20rem;
   }
 
   .md\:w-1\/2{
@@ -2064,6 +2024,10 @@ input[type='radio']:checked + label .toggle-target{
     height: 2.125rem;
   }
 
+  .lg\:h-\[30\.125rem\]{
+    height: 30.125rem;
+  }
+
   .lg\:h-\[31\.25rem\]{
     height: 31.25rem;
   }
@@ -2084,12 +2048,12 @@ input[type='radio']:checked + label .toggle-target{
     height: 100%;
   }
 
-  .lg\:h-\[30\.125rem\]{
-    height: 30.125rem;
-  }
-
   .lg\:max-h-80{
     max-height: 20rem;
+  }
+
+  .lg\:w-2\/3{
+    width: 66.666667%;
   }
 
   .lg\:w-3\/4{
@@ -2104,16 +2068,12 @@ input[type='radio']:checked + label .toggle-target{
     width: 27rem;
   }
 
-  .lg\:w-\[7rem\]{
-    width: 7rem;
-  }
-
   .lg\:w-\[45\%\]{
     width: 45%;
   }
 
-  .lg\:w-2\/3{
-    width: 66.666667%;
+  .lg\:w-\[7rem\]{
+    width: 7rem;
   }
 
   .lg\:w-auto{
@@ -2145,12 +2105,12 @@ input[type='radio']:checked + label .toggle-target{
     gap: 2.5rem;
   }
 
-  .lg\:gap-5{
-    gap: 1.25rem;
-  }
-
   .lg\:gap-2{
     gap: 0.5rem;
+  }
+
+  .lg\:gap-5{
+    gap: 1.25rem;
   }
 
   .lg\:space-y-14 > :not([hidden]) ~ :not([hidden]){
@@ -2159,16 +2119,16 @@ input[type='radio']:checked + label .toggle-target{
     margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
   }
 
-  .lg\:space-y-\[4\.5rem\] > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(4.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(4.5rem * var(--tw-space-y-reverse));
-  }
-
   .lg\:space-y-6 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:space-y-\[4\.5rem\] > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(4.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(4.5rem * var(--tw-space-y-reverse));
   }
 
   .lg\:divide-x > :not([hidden]) ~ :not([hidden]){
@@ -2269,16 +2229,16 @@ input[type='radio']:checked + label .toggle-target{
     padding-top: 3rem;
   }
 
+  .lg\:pt-48{
+    padding-top: 12rem;
+  }
+
   .lg\:pt-5{
     padding-top: 1.25rem;
   }
 
   .lg\:pt-8{
     padding-top: 2rem;
-  }
-
-  .lg\:pt-48{
-    padding-top: 12rem;
   }
 
   .lg\:text-2xl{
@@ -2312,10 +2272,6 @@ input[type='radio']:checked + label .toggle-target{
 }
 
 @media (min-width: 80rem){
-
-  .xl\:mt-10{
-    margin-top: 2.5rem;
-  }
 
   .xl\:h-12{
     height: 3rem;
@@ -2381,24 +2337,12 @@ input[type='radio']:checked + label .toggle-target{
     padding-right: 4rem;
   }
 
-  .xl\:pt-7{
-    padding-top: 1.75rem;
-  }
-
-  .xl\:pt-64{
-    padding-top: 16rem;
-  }
-
-  .xl\:pt-48{
-    padding-top: 12rem;
-  }
-
-  .xl\:pt-0{
-    padding-top: 0px;
-  }
-
   .xl\:pt-10{
     padding-top: 2.5rem;
+  }
+
+  .xl\:pt-7{
+    padding-top: 1.75rem;
   }
 
   .xl\:text-32{
@@ -2430,10 +2374,6 @@ input[type='radio']:checked + label .toggle-target{
 }
 
 @media (min-width: 90rem){
-
-  .\32xl\:mt-0{
-    margin-top: 0px;
-  }
 
   .\32xl\:size-200{
     width: 12.5rem;

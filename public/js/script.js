@@ -134,9 +134,8 @@ messageBtn.addEventListener('click', () => {
 // Swipers
 
 // Swiper Services Section
-var swiper = new Swiper('.swiper-services', {
+var swiperServices = new Swiper('.swiper-services', {
   slidesPerView: 5,
-  // slidesPerGroup: 5,
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
@@ -179,7 +178,7 @@ var swiper = new Swiper('.swiper-services', {
 });
 
 // Swiper Why Choose Us
-var swiper = new Swiper('.swiper-why-choose-us', {
+var swiperChooseUs = new Swiper('.swiper-why-choose-us', {
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
@@ -215,18 +214,66 @@ var swiper = new Swiper('.swiper-why-choose-us', {
 // Function to update custom pagination
 function updateCustomPagination(swiper) {
   const totalSlides = swiper.slides.length;
-  const visibleSlides = swiper.params.slidesPerView || 1; // Default to 1 if not defined
-  let currentPage = swiper.realIndex + visibleSlides;
+  const slidesPerView = Math.ceil(swiper.params.slidesPerView);
+  const currentIndex = swiper.realIndex;
+  const currentPage = Math.min(currentIndex + 1, totalSlides);
 
-  // Ensure currentPage doesn't exceed totalSlides
-  currentPage = Math.min(currentPage, totalSlides);
-
+  // Update the custom pagination
   document
     .querySelectorAll('.swiper-pagination-custom')
     .forEach((pagination) => {
-      pagination.textContent = `${Math.floor(currentPage)} / ${totalSlides}`;
+      pagination.textContent = `${currentPage} / ${totalSlides}`;
     });
 }
+
+// Update pagination on window resize
+function updatePaginationOnResize() {
+  swiperServices.update();
+  swiperChooseUs.update();
+  swiperReviews.update();
+}
+
+// Swiper Reviews
+var swiperReviews = new Swiper('.swiper-reviews', {
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+  navigation: {
+    nextEl: '.swiper-reviews-next',
+    prevEl: '.swiper-reviews-prev',
+  },
+  on: {
+    init: function () {
+      updateCustomPagination(this);
+    },
+    slideChange: function () {
+      updateCustomPagination(this);
+    },
+  },
+  breakpoints: {
+    0: {
+      spaceBetween: 12,
+      slidesPerView: 1.2,
+    },
+    768: {
+      spaceBetween: 16,
+      slidesPerView: 1.5,
+    },
+    1024: {
+      spaceBetween: 20,
+      slidesPerView: 2.2,
+    },
+    1280: {
+      spaceBetween: 20,
+      slidesPerView: 2.5,
+    },
+    1920: {
+      spaceBetween: 20,
+      slidesPerView: 3,
+    },
+  },
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   const cases = document.querySelectorAll('.useful-case-item');
@@ -291,48 +338,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Reapply initial state on window resize
   window.addEventListener('resize', setInitialState);
-});
-
-// Swiper Revies
-var swiper = new Swiper('.swiper-reviews', {
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '.swiper-reviews-next',
-    prevEl: '.swiper-reviews-prev',
-  },
-  on: {
-    init: function () {
-      updateCustomPagination(this);
-    },
-    slideChange: function () {
-      updateCustomPagination(this);
-    },
-  },
-  breakpoints: {
-    0: {
-      spaceBetween: 12,
-      slidesPerView: 1.2,
-    },
-    768: {
-      spaceBetween: 16,
-      slidesPerView: 1.5,
-    },
-    1024: {
-      spaceBetween: 20,
-      slidesPerView: 2.2,
-    },
-    1280: {
-      spaceBetween: 20,
-      slidesPerView: 2.5,
-    },
-    1920: {
-      spaceBetween: 20,
-      slidesPerView: 3,
-    },
-  },
+  // Update pagination on window resize
+  window.addEventListener('resize', updatePaginationOnResize);
 });
 
 // Tabs of Prices section
