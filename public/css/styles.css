@@ -703,6 +703,9 @@ section{
 .top-\[4\.375rem\]{
   top: 4.375rem;
 }
+.-left-24{
+  left: -6rem;
+}
 .z-10{
   z-index: 10;
 }
