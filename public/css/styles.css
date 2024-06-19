@@ -767,12 +767,6 @@ section{
 .mt-auto{
   margin-top: auto;
 }
-.-ml-px{
-  margin-left: -1px;
-}
-.-ml-\[0\.0938rem\]{
-  margin-left: -0.0938rem;
-}
 .block{
   display: block;
 }
@@ -1133,10 +1127,6 @@ section{
   border-top-width: 1px;
   border-bottom-width: 1px;
 }
-.border-x-\[0\.0313rem\]{
-  border-left-width: 0.0313rem;
-  border-right-width: 0.0313rem;
-}
 .border-t{
   border-top-width: 1px;
 }
@@ -1406,9 +1396,6 @@ section{
 }
 .leading-7{
   line-height: 1.75rem;
-}
-.leading-\[3rem\]{
-  line-height: 3rem;
 }
 .text-brand-blue{
   --tw-text-opacity: 1;
@@ -2368,6 +2355,10 @@ input[type='radio']:checked + label .toggle-target{
 
   .xl\:leading-10{
     line-height: 2.5rem;
+  }
+
+  .xl\:leading-\[3rem\]{
+    line-height: 3rem;
   }
 
   .\*\:xl\:px-12 > *{
