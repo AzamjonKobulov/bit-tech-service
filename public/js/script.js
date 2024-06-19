@@ -131,8 +131,6 @@ messageBtn.addEventListener('click', () => {
   });
 });
 
-// Swipers
-
 // Swiper Services Section
 var swiperServices = new Swiper('.swiper-services', {
   slidesPerView: 5,
@@ -146,10 +144,10 @@ var swiperServices = new Swiper('.swiper-services', {
   },
   on: {
     init: function () {
-      updateCustomPagination(this);
+      updateCustomPagination(this, 'services');
     },
     slideChange: function () {
-      updateCustomPagination(this);
+      updateCustomPagination(this, 'services');
     },
   },
   breakpoints: {
@@ -189,10 +187,10 @@ var swiperChooseUs = new Swiper('.swiper-why-choose-us', {
   },
   on: {
     init: function () {
-      updateCustomPagination(this);
+      updateCustomPagination(this, 'choose-us');
     },
     slideChange: function () {
-      updateCustomPagination(this);
+      updateCustomPagination(this, 'choose-us');
     },
   },
   breakpoints: {
@@ -211,28 +209,6 @@ var swiperChooseUs = new Swiper('.swiper-why-choose-us', {
   },
 });
 
-// Function to update custom pagination
-function updateCustomPagination(swiper) {
-  const totalSlides = swiper.slides.length;
-  const slidesPerView = Math.ceil(swiper.params.slidesPerView);
-  const currentIndex = swiper.realIndex;
-  const currentPage = Math.min(currentIndex + 1, totalSlides);
-
-  // Update the custom pagination
-  document
-    .querySelectorAll('.swiper-pagination-custom')
-    .forEach((pagination) => {
-      pagination.textContent = `${currentPage} / ${totalSlides}`;
-    });
-}
-
-// Update pagination on window resize
-function updatePaginationOnResize() {
-  swiperServices.update();
-  swiperChooseUs.update();
-  swiperReviews.update();
-}
-
 // Swiper Reviews
 var swiperReviews = new Swiper('.swiper-reviews', {
   pagination: {
@@ -245,10 +221,10 @@ var swiperReviews = new Swiper('.swiper-reviews', {
   },
   on: {
     init: function () {
-      updateCustomPagination(this);
+      updateCustomPagination(this, 'reviews');
     },
     slideChange: function () {
-      updateCustomPagination(this);
+      updateCustomPagination(this, 'reviews');
     },
   },
   breakpoints: {
@@ -274,6 +250,32 @@ var swiperReviews = new Swiper('.swiper-reviews', {
     },
   },
 });
+
+// Function to update custom pagination
+function updateCustomPagination(swiper, type) {
+  const totalSlides = swiper.slides.length;
+  const slidesPerView = Math.ceil(swiper.params.slidesPerView);
+  const currentIndex = swiper.realIndex;
+  const currentPage = Math.min(currentIndex + slidesPerView, totalSlides);
+
+  // Update the custom pagination for the relevant swiper
+  document
+    .querySelectorAll(`.swiper-pagination-custom.${type}`)
+    .forEach((pagination) => {
+      pagination.textContent = `${currentPage} / ${totalSlides}`;
+    });
+}
+
+// Update pagination on window resize
+function updatePaginationOnResize() {
+  swiperServices.update();
+  swiperChooseUs.update();
+  swiperReviews.update();
+}
+
+window.addEventListener('resize', updatePaginationOnResize);
+
+window.addEventListener('resize', updatePaginationOnResize);
 
 document.addEventListener('DOMContentLoaded', () => {
   const cases = document.querySelectorAll('.useful-case-item');
