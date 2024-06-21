@@ -26,7 +26,7 @@
   }
 
   h3 {
-    @apply text-xl sm:text-2xl md:text-3xl xl:text-32 leading-7 xl:leading-10;
+    @apply text-xl sm:text-2xl md:text-3xl xl:text-32 !leading-6 xl:!leading-7;
   }
 
   h4 {
