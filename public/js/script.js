@@ -482,7 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('scroll-tabs-left').addEventListener('click', () => {
   document.getElementById('tabs-buttons-container').scrollBy({
     top: 0,
-    left: -100,
+    left: -200,
     behavior: 'smooth',
   });
 });
@@ -490,7 +490,7 @@ document.getElementById('scroll-tabs-left').addEventListener('click', () => {
 document.getElementById('scroll-tabs-right').addEventListener('click', () => {
   document.getElementById('tabs-buttons-container').scrollBy({
     top: 0,
-    left: 100,
+    left: 200,
     behavior: 'smooth',
   });
 });
@@ -607,4 +607,19 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeSearchBar('search1', 'searchHistory1', 'search-icon-path1');
   initializeSearchBar('search2', 'searchHistory2', 'search-icon-path2');
   initializeSearchBar('search3', 'searchHistory3', 'search-icon-path3');
+});
+
+// Hover Scroll
+document.addEventListener('DOMContentLoaded', function () {
+  const hoverLists = document.querySelectorAll('.hover-list');
+
+  hoverLists.forEach(function (hoverList) {
+    hoverList.addEventListener('mouseenter', function () {
+      hoverList.classList.add('overflow-y-auto', 'scroll-sm');
+    });
+
+    hoverList.addEventListener('mouseleave', function () {
+      hoverList.classList.remove('overflow-y-auto', 'scroll-sm');
+    });
+  });
 });

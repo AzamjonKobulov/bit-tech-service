@@ -51,7 +51,7 @@
 }
 
 .scroll-sm::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 4px; /* Width of the scrollbar */
 }
 
 .scroll-sm::-webkit-scrollbar-track {
@@ -67,6 +67,26 @@
 
 /* Handle on hover */
 .scroll-sm::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the thumb when hovered */
+}
+
+.scroll-md::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.scroll-md::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border-radius: 10px;
+}
+
+/* Handle */
+.scroll-md::-webkit-scrollbar-thumb {
+  background: #c4c4c4; /* Color of the thumb */
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.scroll-md::-webkit-scrollbar-thumb:hover {
   background: #555; /* Color of the thumb when hovered */
 }
 

@@ -673,17 +673,11 @@ section{
 .bottom-10{
   bottom: 2.5rem;
 }
-.bottom-5{
-  bottom: 1.25rem;
-}
 .left-0{
   left: 0px;
 }
 .left-2{
   left: 0.5rem;
-}
-.right-10{
-  right: 2.5rem;
 }
 .right-5{
   right: 1.25rem;
@@ -700,11 +694,8 @@ section{
 .top-\[4\.375rem\]{
   top: 4.375rem;
 }
-.bottom-7{
-  bottom: 1.75rem;
-}
-.right-7{
-  right: 1.75rem;
+.bottom-5{
+  bottom: 1.25rem;
 }
 .z-10{
   z-index: 10;
@@ -852,8 +843,14 @@ section{
 .h-px{
   height: 1px;
 }
-.max-h-80{
-  max-height: 20rem;
+.max-h-52{
+  max-height: 13rem;
+}
+.max-h-40{
+  max-height: 10rem;
+}
+.max-h-28{
+  max-height: 7rem;
 }
 .w-1{
   width: 0.25rem;
@@ -926,14 +923,15 @@ section{
 .max-w-\[120rem\]{
   max-width: 120rem;
 }
-.max-w-\[32rem\]{
-  max-width: 32rem;
-}
 .max-w-\[50rem\]{
   max-width: 50rem;
 }
 .max-w-base{
   max-width: 90rem;
+}
+.max-w-max{
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 .max-w-md{
   max-width: 28rem;
@@ -941,13 +939,6 @@ section{
 .max-w-min{
   max-width: -moz-min-content;
   max-width: min-content;
-}
-.max-w-\[40rem\]{
-  max-width: 40rem;
-}
-.max-w-max{
-  max-width: -moz-max-content;
-  max-width: max-content;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -1338,6 +1329,9 @@ section{
 .pb-12{
   padding-bottom: 3rem;
 }
+.pb-20{
+  padding-bottom: 5rem;
+}
 .pb-5{
   padding-bottom: 1.25rem;
 }
@@ -1373,12 +1367,6 @@ section{
 }
 .pt-8{
   padding-top: 2rem;
-}
-.pb-20{
-  padding-bottom: 5rem;
-}
-.pb-16{
-  padding-bottom: 4rem;
 }
 .text-center{
   text-align: center;
@@ -1517,7 +1505,7 @@ section{
 }
 
 .scroll-sm::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 4px; /* Width of the scrollbar */
 }
 
 .scroll-sm::-webkit-scrollbar-track {
@@ -1533,6 +1521,26 @@ section{
 
 /* Handle on hover */
 .scroll-sm::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the thumb when hovered */
+}
+
+.scroll-md::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.scroll-md::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border-radius: 10px;
+}
+
+/* Handle */
+.scroll-md::-webkit-scrollbar-thumb {
+  background: #c4c4c4; /* Color of the thumb */
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.scroll-md::-webkit-scrollbar-thumb:hover {
   background: #555; /* Color of the thumb when hovered */
 }
 
@@ -2034,14 +2042,6 @@ input[type='radio']:checked + label .toggle-target{
     left: 1.25rem;
   }
 
-  .lg\:bottom-10{
-    bottom: 2.5rem;
-  }
-
-  .lg\:right-10{
-    right: 2.5rem;
-  }
-
   .lg\:col-span-2{
     grid-column: span 2 / span 2;
   }
@@ -2114,6 +2114,18 @@ input[type='radio']:checked + label .toggle-target{
     height: 100%;
   }
 
+  .lg\:max-h-\[28\.125rem\]{
+    max-height: 28.125rem;
+  }
+
+  .lg\:max-h-20{
+    max-height: 5rem;
+  }
+
+  .lg\:max-h-32{
+    max-height: 8rem;
+  }
+
   .lg\:w-2\/3{
     width: 66.666667%;
   }
@@ -2173,12 +2185,6 @@ input[type='radio']:checked + label .toggle-target{
 
   .lg\:gap-5{
     gap: 1.25rem;
-  }
-
-  .lg\:space-y-14 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(3.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
   }
 
   .lg\:space-y-6 > :not([hidden]) ~ :not([hidden]){
@@ -2289,8 +2295,16 @@ input[type='radio']:checked + label .toggle-target{
     padding-bottom: 2rem;
   }
 
+  .lg\:pb-0{
+    padding-bottom: 0px;
+  }
+
   .lg\:pb-10{
     padding-bottom: 2.5rem;
+  }
+
+  .lg\:pl-16{
+    padding-left: 4rem;
   }
 
   .lg\:pr-10{
@@ -2311,10 +2325,6 @@ input[type='radio']:checked + label .toggle-target{
 
   .lg\:pt-8{
     padding-top: 2rem;
-  }
-
-  .lg\:pb-20{
-    padding-bottom: 5rem;
   }
 
   .lg\:text-2xl{
@@ -2361,6 +2371,18 @@ input[type='radio']:checked + label .toggle-target{
     height: 4.5rem;
   }
 
+  .xl\:max-h-\[21\.25rem\]{
+    max-height: 21.25rem;
+  }
+
+  .xl\:max-h-28{
+    max-height: 7rem;
+  }
+
+  .xl\:max-h-40{
+    max-height: 10rem;
+  }
+
   .xl\:w-2\/3{
     width: 66.666667%;
   }
@@ -2394,10 +2416,6 @@ input[type='radio']:checked + label .toggle-target{
     padding: 2.5rem;
   }
 
-  .xl\:p-16{
-    padding: 4rem;
-  }
-
   .xl\:px-10{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -2416,6 +2434,15 @@ input[type='radio']:checked + label .toggle-target{
   .xl\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .xl\:py-16{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .xl\:pr-10{
+    padding-right: 2.5rem;
   }
 
   .xl\:pr-16{
