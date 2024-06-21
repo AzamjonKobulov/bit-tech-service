@@ -700,6 +700,12 @@ section{
 .top-\[4\.375rem\]{
   top: 4.375rem;
 }
+.bottom-7{
+  bottom: 1.75rem;
+}
+.right-7{
+  right: 1.75rem;
+}
 .z-10{
   z-index: 10;
 }
@@ -935,6 +941,13 @@ section{
 .max-w-min{
   max-width: -moz-min-content;
   max-width: min-content;
+}
+.max-w-\[40rem\]{
+  max-width: 40rem;
+}
+.max-w-max{
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -1360,6 +1373,12 @@ section{
 }
 .pt-8{
   padding-top: 2rem;
+}
+.pb-20{
+  padding-bottom: 5rem;
+}
+.pb-16{
+  padding-bottom: 4rem;
 }
 .text-center{
   text-align: center;
@@ -2015,6 +2034,14 @@ input[type='radio']:checked + label .toggle-target{
     left: 1.25rem;
   }
 
+  .lg\:bottom-10{
+    bottom: 2.5rem;
+  }
+
+  .lg\:right-10{
+    right: 2.5rem;
+  }
+
   .lg\:col-span-2{
     grid-column: span 2 / span 2;
   }
@@ -2284,6 +2311,10 @@ input[type='radio']:checked + label .toggle-target{
 
   .lg\:pt-8{
     padding-top: 2rem;
+  }
+
+  .lg\:pb-20{
+    padding-bottom: 5rem;
   }
 
   .lg\:text-2xl{
