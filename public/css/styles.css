@@ -843,6 +843,13 @@ section{
 .h-px{
   height: 1px;
 }
+.max-h-full{
+  max-height: 100%;
+}
+.max-h-min{
+  max-height: -moz-min-content;
+  max-height: min-content;
+}
 .w-1{
   width: 0.25rem;
 }
@@ -1130,6 +1137,10 @@ section{
 .rounded-t-3xl{
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
+}
+.rounded-r-xl{
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
 }
 .border{
   border-width: 1px;
@@ -1969,6 +1980,10 @@ input[type='radio']:checked + label .toggle-target{
     font-size: 1rem;
     line-height: 1.5rem;
   }
+
+  .md\:\!leading-10{
+    line-height: 2.5rem !important;
+  }
 }
 
 @media (min-width: 64rem){
@@ -2166,6 +2181,11 @@ input[type='radio']:checked + label .toggle-target{
     border-top-right-radius: 2rem;
   }
 
+  .lg\:rounded-r-3xl{
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+
   .lg\:border-y{
     border-top-width: 1px;
     border-bottom-width: 1px;
@@ -2279,6 +2299,10 @@ input[type='radio']:checked + label .toggle-target{
 
 @media (min-width: 80rem){
 
+  .xl\:mt-6{
+    margin-top: 1.5rem;
+  }
+
   .xl\:h-12{
     height: 3rem;
   }
@@ -2309,6 +2333,11 @@ input[type='radio']:checked + label .toggle-target{
 
   .xl\:rounded-32{
     border-radius: 2rem;
+  }
+
+  .xl\:rounded-r-32{
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
   }
 
   .xl\:p-10{
@@ -2375,6 +2404,14 @@ input[type='radio']:checked + label .toggle-target{
 
   .xl\:leading-\[3rem\]{
     line-height: 3rem;
+  }
+
+  .xl\:leading-8{
+    line-height: 2rem;
+  }
+
+  .xl\:\!leading-8{
+    line-height: 2rem !important;
   }
 
   .\*\:xl\:px-12 > *{
