@@ -34,7 +34,7 @@
   }
 
   h5 {
-    @apply sm:text-lg leading-4;
+    @apply sm:text-lg !leading-5;
   }
 
   p {

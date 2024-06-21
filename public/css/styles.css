@@ -498,7 +498,7 @@ h4{
 }
 
 h5{
-  line-height: 1rem;
+  line-height: 1.25rem !important;
 }
 
 @media (min-width: 40rem){
@@ -825,6 +825,9 @@ section{
 .h-7{
   height: 1.75rem;
 }
+.h-72{
+  height: 18rem;
+}
 .h-8{
   height: 2rem;
 }
@@ -839,9 +842,6 @@ section{
 }
 .h-px{
   height: 1px;
-}
-.h-72{
-  height: 18rem;
 }
 .w-1{
   width: 0.25rem;
@@ -1064,6 +1064,11 @@ section{
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.625rem * var(--tw-space-y-reverse));
 }
 .divide-x > :not([hidden]) ~ :not([hidden]){
   --tw-divide-x-reverse: 0;
@@ -2016,6 +2021,10 @@ input[type='radio']:checked + label .toggle-target{
     height: 2.5rem;
   }
 
+  .lg\:h-80{
+    height: 20rem;
+  }
+
   .lg\:h-\[2\.125rem\]{
     height: 2.125rem;
   }
@@ -2042,18 +2051,6 @@ input[type='radio']:checked + label .toggle-target{
 
   .lg\:h-full{
     height: 100%;
-  }
-
-  .lg\:h-80{
-    height: 20rem;
-  }
-
-  .lg\:max-h-80{
-    max-height: 20rem;
-  }
-
-  .lg\:max-h-72{
-    max-height: 18rem;
   }
 
   .lg\:w-2\/3{
@@ -2216,14 +2213,14 @@ input[type='radio']:checked + label .toggle-target{
     padding-bottom: 1rem;
   }
 
-  .lg\:py-8{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
   .lg\:py-7{
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
+  }
+
+  .lg\:py-8{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .lg\:pb-10{
