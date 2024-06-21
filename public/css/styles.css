@@ -840,6 +840,9 @@ section{
 .h-px{
   height: 1px;
 }
+.h-72{
+  height: 18rem;
+}
 .w-1{
   width: 0.25rem;
 }
@@ -2041,8 +2044,16 @@ input[type='radio']:checked + label .toggle-target{
     height: 100%;
   }
 
+  .lg\:h-80{
+    height: 20rem;
+  }
+
   .lg\:max-h-80{
     max-height: 20rem;
+  }
+
+  .lg\:max-h-72{
+    max-height: 18rem;
   }
 
   .lg\:w-2\/3{
@@ -2208,6 +2219,11 @@ input[type='radio']:checked + label .toggle-target{
   .lg\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:py-7{
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
   .lg\:pb-10{
