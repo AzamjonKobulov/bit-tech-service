@@ -682,6 +682,9 @@ section{
 .left-2{
   left: 0.5rem;
 }
+.right-10{
+  right: 2.5rem;
+}
 .right-5{
   right: 1.25rem;
 }
@@ -843,12 +846,8 @@ section{
 .h-px{
   height: 1px;
 }
-.max-h-full{
-  max-height: 100%;
-}
-.max-h-min{
-  max-height: -moz-min-content;
-  max-height: min-content;
+.max-h-80{
+  max-height: 20rem;
 }
 .w-1{
   width: 0.25rem;
@@ -1134,13 +1133,13 @@ section{
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
 }
-.rounded-t-3xl{
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-}
 .rounded-r-xl{
   border-top-right-radius: 0.75rem;
   border-bottom-right-radius: 0.75rem;
+}
+.rounded-t-3xl{
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 .border{
   border-width: 1px;
@@ -1496,6 +1495,26 @@ section{
 .scroll-none::-webkit-scrollbar{
   height: 0px;
   width: 0px;
+}
+
+.scroll-sm::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.scroll-sm::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border-radius: 10px;
+}
+
+/* Handle */
+.scroll-sm::-webkit-scrollbar-thumb {
+  background: #ccc; /* Color of the thumb */
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.scroll-sm::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the thumb when hovered */
 }
 
 .option input[type='radio']:checked + label{
@@ -2176,14 +2195,14 @@ input[type='radio']:checked + label .toggle-target{
     border-bottom-right-radius: 2rem;
   }
 
-  .lg\:rounded-t-32{
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-  }
-
   .lg\:rounded-r-3xl{
     border-top-right-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
+  }
+
+  .lg\:rounded-t-32{
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
   }
 
   .lg\:border-y{
@@ -2398,20 +2417,12 @@ input[type='radio']:checked + label .toggle-target{
     line-height: 1.25rem;
   }
 
-  .xl\:leading-10{
-    line-height: 2.5rem;
+  .xl\:\!leading-8{
+    line-height: 2rem !important;
   }
 
   .xl\:leading-\[3rem\]{
     line-height: 3rem;
-  }
-
-  .xl\:leading-8{
-    line-height: 2rem;
-  }
-
-  .xl\:\!leading-8{
-    line-height: 2rem !important;
   }
 
   .\*\:xl\:px-12 > *{

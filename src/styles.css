@@ -50,6 +50,26 @@
   @apply w-0 h-0;
 }
 
+.scroll-sm::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.scroll-sm::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border-radius: 10px;
+}
+
+/* Handle */
+.scroll-sm::-webkit-scrollbar-thumb {
+  background: #ccc; /* Color of the thumb */
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.scroll-sm::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the thumb when hovered */
+}
+
 .option input[type='radio']:checked + label {
   @apply bg-brand-gray-200;
 }
