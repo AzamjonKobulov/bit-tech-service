@@ -135,7 +135,7 @@ messageBtn.addEventListener('click', () => {
 var swiperServices = new Swiper('.swiper-services', {
   slidesPerView: 5,
   pagination: {
-    el: '.swiper-pagination',
+    // el: '.swiper-pagination',
     type: 'fraction',
   },
   navigation: {
@@ -178,7 +178,7 @@ var swiperServices = new Swiper('.swiper-services', {
 // Swiper Why Choose Us
 var swiperChooseUs = new Swiper('.swiper-why-choose-us', {
   pagination: {
-    el: '.swiper-pagination',
+    // el: '.swiper-pagination',
     type: 'fraction',
   },
   navigation: {
@@ -212,7 +212,7 @@ var swiperChooseUs = new Swiper('.swiper-why-choose-us', {
 // Swiper Reviews
 var swiperReviews = new Swiper('.swiper-reviews', {
   pagination: {
-    el: '.swiper-pagination',
+    // el: '.swiper-pagination',
     type: 'fraction',
   },
   navigation: {

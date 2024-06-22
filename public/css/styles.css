@@ -934,6 +934,13 @@ section{
 .w-full{
   width: 100%;
 }
+.w-96{
+  width: 24rem;
+}
+.w-min{
+  width: -moz-min-content;
+  width: min-content;
+}
 .min-w-max{
   min-width: -moz-max-content;
   min-width: max-content;
@@ -969,6 +976,27 @@ section{
 .max-w-min{
   max-width: -moz-min-content;
   max-width: min-content;
+}
+.max-w-\[62\.5rem\]{
+  max-width: 62.5rem;
+}
+.max-w-\[31\.25rem\]{
+  max-width: 31.25rem;
+}
+.max-w-4xl{
+  max-width: 56rem;
+}
+.\!max-w-5xl{
+  max-width: 64rem !important;
+}
+.max-w-3xl{
+  max-width: 48rem;
+}
+.max-w-\[51\.25rem\]{
+  max-width: 51.25rem;
+}
+.max-w-\[51\.75rem\]{
+  max-width: 51.75rem;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -2190,6 +2218,10 @@ input[type='radio']:checked + label .toggle-target{
 
   .lg\:max-w-none{
     max-width: none;
+  }
+
+  .lg\:max-w-base{
+    max-width: 90rem;
   }
 
   .lg\:-translate-y-\[300\%\]{
