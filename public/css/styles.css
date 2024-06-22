@@ -646,6 +646,45 @@ section{
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
+.container{
+  width: 100%;
+}
+@media (min-width: 30rem){
+
+  .container{
+    max-width: 30rem;
+  }
+}
+@media (min-width: 40rem){
+
+  .container{
+    max-width: 40rem;
+  }
+}
+@media (min-width: 48rem){
+
+  .container{
+    max-width: 48rem;
+  }
+}
+@media (min-width: 64rem){
+
+  .container{
+    max-width: 64rem;
+  }
+}
+@media (min-width: 80rem){
+
+  .container{
+    max-width: 80rem;
+  }
+}
+@media (min-width: 90rem){
+
+  .container{
+    max-width: 90rem;
+  }
+}
 .fixed{
   position: fixed;
 }
@@ -673,6 +712,9 @@ section{
 .bottom-10{
   bottom: 2.5rem;
 }
+.bottom-5{
+  bottom: 1.25rem;
+}
 .left-0{
   left: 0px;
 }
@@ -693,9 +735,6 @@ section{
 }
 .top-\[4\.375rem\]{
   top: 4.375rem;
-}
-.bottom-5{
-  bottom: 1.25rem;
 }
 .z-10{
   z-index: 10;
@@ -842,15 +881,6 @@ section{
 }
 .h-px{
   height: 1px;
-}
-.max-h-52{
-  max-height: 13rem;
-}
-.max-h-40{
-  max-height: 10rem;
-}
-.max-h-28{
-  max-height: 7rem;
 }
 .w-1{
   width: 0.25rem;
@@ -1876,6 +1906,10 @@ input[type='radio']:checked + label .toggle-target{
     padding: 1.25rem;
   }
 
+  .sm\:p-10{
+    padding: 2.5rem;
+  }
+
   .sm\:px-0{
     padding-left: 0px;
     padding-right: 0px;
@@ -2114,16 +2148,12 @@ input[type='radio']:checked + label .toggle-target{
     height: 100%;
   }
 
-  .lg\:max-h-\[28\.125rem\]{
-    max-height: 28.125rem;
-  }
-
-  .lg\:max-h-20{
-    max-height: 5rem;
-  }
-
   .lg\:max-h-32{
     max-height: 8rem;
+  }
+
+  .lg\:max-h-\[28\.125rem\]{
+    max-height: 28.125rem;
   }
 
   .lg\:w-2\/3{
@@ -2371,16 +2401,12 @@ input[type='radio']:checked + label .toggle-target{
     height: 4.5rem;
   }
 
-  .xl\:max-h-\[21\.25rem\]{
-    max-height: 21.25rem;
-  }
-
-  .xl\:max-h-28{
-    max-height: 7rem;
-  }
-
   .xl\:max-h-40{
     max-height: 10rem;
+  }
+
+  .xl\:max-h-\[21\.25rem\]{
+    max-height: 21.25rem;
   }
 
   .xl\:w-2\/3{

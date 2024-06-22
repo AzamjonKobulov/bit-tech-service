@@ -251,6 +251,31 @@ var swiperReviews = new Swiper('.swiper-reviews', {
   },
 });
 
+// Swiper Hero
+var heroSwiper = new Swiper('.heroSwiper', {
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  allowTouchMove: true, // Ensure touch move is enabled
+  grabCursor: true, // Adds a grab cursor effect
+  simulateTouch: true, // Enables swiping with mouse/touch
+  touchRatio: 1, // Ratio to control the touch sensitivity
+  touchAngle: 45, // Angle to detect swipe (in degrees)
+  longSwipesRatio: 0.5, // Ratio for long swipes
+  longSwipesMs: 300, // Duration of long swipe (in milliseconds)
+  followFinger: true, // Enables slides following the finger
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
 // Function to update custom pagination
 function updateCustomPagination(swiper, type) {
   const totalSlides = swiper.slides.length;
