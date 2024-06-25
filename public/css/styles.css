@@ -646,45 +646,6 @@ section{
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
-.container{
-  width: 100%;
-}
-@media (min-width: 30rem){
-
-  .container{
-    max-width: 30rem;
-  }
-}
-@media (min-width: 40rem){
-
-  .container{
-    max-width: 40rem;
-  }
-}
-@media (min-width: 48rem){
-
-  .container{
-    max-width: 48rem;
-  }
-}
-@media (min-width: 64rem){
-
-  .container{
-    max-width: 64rem;
-  }
-}
-@media (min-width: 80rem){
-
-  .container{
-    max-width: 80rem;
-  }
-}
-@media (min-width: 90rem){
-
-  .container{
-    max-width: 90rem;
-  }
-}
 .fixed{
   position: fixed;
 }
@@ -750,6 +711,9 @@ section{
 }
 .z-\[70\]{
   z-index: 70;
+}
+.z-\[\]{
+  z-index: ;
 }
 .col-span-2{
   grid-column: span 2 / span 2;
@@ -882,6 +846,9 @@ section{
 .h-px{
   height: 1px;
 }
+.h-1\/2{
+  height: 50%;
+}
 .w-1{
   width: 0.25rem;
 }
@@ -934,13 +901,6 @@ section{
 .w-full{
   width: 100%;
 }
-.w-96{
-  width: 24rem;
-}
-.w-min{
-  width: -moz-min-content;
-  width: min-content;
-}
 .min-w-max{
   min-width: -moz-max-content;
   min-width: max-content;
@@ -976,27 +936,6 @@ section{
 .max-w-min{
   max-width: -moz-min-content;
   max-width: min-content;
-}
-.max-w-\[62\.5rem\]{
-  max-width: 62.5rem;
-}
-.max-w-\[31\.25rem\]{
-  max-width: 31.25rem;
-}
-.max-w-4xl{
-  max-width: 56rem;
-}
-.\!max-w-5xl{
-  max-width: 64rem !important;
-}
-.max-w-3xl{
-  max-width: 48rem;
-}
-.max-w-\[51\.25rem\]{
-  max-width: 51.25rem;
-}
-.max-w-\[51\.75rem\]{
-  max-width: 51.75rem;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -1953,6 +1892,11 @@ input[type='radio']:checked + label .toggle-target{
     padding-bottom: 2rem;
   }
 
+  .sm\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .sm\:pl-10{
     padding-left: 2.5rem;
   }
@@ -1963,6 +1907,10 @@ input[type='radio']:checked + label .toggle-target{
 
   .sm\:pt-10{
     padding-top: 2.5rem;
+  }
+
+  .sm\:pt-8{
+    padding-top: 2rem;
   }
 
   .sm\:text-3xl{
@@ -2184,6 +2132,14 @@ input[type='radio']:checked + label .toggle-target{
     max-height: 28.125rem;
   }
 
+  .lg\:max-h-\[36\.3125rem\]{
+    max-height: 36.3125rem;
+  }
+
+  .lg\:max-h-\[581px\]{
+    max-height: 581px;
+  }
+
   .lg\:w-2\/3{
     width: 66.666667%;
   }
@@ -2218,10 +2174,6 @@ input[type='radio']:checked + label .toggle-target{
 
   .lg\:max-w-none{
     max-width: none;
-  }
-
-  .lg\:max-w-base{
-    max-width: 90rem;
   }
 
   .lg\:-translate-y-\[300\%\]{
